@@ -1,8 +1,8 @@
-import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Timeline } from "@/components/ui/timeline";
 import { EtheralShadow } from "@/components/ui/ethereal-shadow";
+import { TextEffect } from "@/components/ui/text-effect";
 
 const timelineData = [
   {
@@ -149,15 +149,28 @@ const TimelineSection = () => {
       {/* Content Layer */}
       <div className="relative z-10 container mx-auto px-6">
         {/* Header */}
-        <motion.div
+        <div
           ref={headerRef}
-          initial={{ opacity: 0, y: 40 }}
-          animate={isHeaderInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-10"
+          className="text-center mb-6"
         >
-          <h2 className="text-5xl md:text-6xl lg:text-8xl font-bold text-foreground">מי אני?</h2>
-        </motion.div>
+          <TextEffect
+            preset="blur"
+            per="word"
+            trigger={isHeaderInView}
+            className="text-5xl md:text-6xl lg:text-8xl font-bold text-foreground"
+          >
+            מי אני?
+          </TextEffect>
+          <TextEffect
+            preset="blur"
+            per="line"
+            trigger={isHeaderInView}
+            delay={0.3}
+            className="text-lg md:text-xl text-muted-foreground mt-8 max-w-4xl mx-auto leading-relaxed"
+          >
+            אני יואב שריקר, לוחם לשעבר שאובחן בסרטן בגיל 21, והמחלה סימנה עבורי נקודת מפנה פיזית ותודעתית. כיום אני עוסק במחקר, בעשייה פיזית קיצונית ובפיתוח כלים וידע לאנשים המתמודדים עם מחלה ואתגר, מתוך מטרה להבין מה באמת אפשרי בזמן משבר.
+          </TextEffect>
+        </div>
 
         {/* Timeline */}
         <Timeline data={timelineData} />
