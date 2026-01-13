@@ -1,8 +1,8 @@
-import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Timeline } from "@/components/ui/timeline";
 import { EtheralShadow } from "@/components/ui/ethereal-shadow";
+import { TextEffect } from "@/components/ui/text-effect";
 
 const timelineData = [
   {
@@ -160,17 +160,16 @@ const TimelineSection = () => {
       {/* Content Layer */}
       <div className="relative z-10 container mx-auto px-6">
         {/* Header */}
-        <motion.div
-          ref={headerRef}
-          initial={{ opacity: 0, y: 40 }}
-          animate={isHeaderInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-10"
-        >
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground">
+        <div ref={headerRef} className="text-center mb-10">
+          <TextEffect
+            preset="blur"
+            trigger={isHeaderInView}
+            as="h2"
+            className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground"
+          >
             מי אני?
-          </h2>
-        </motion.div>
+          </TextEffect>
+        </div>
 
         {/* Timeline */}
         <Timeline data={timelineData} />
