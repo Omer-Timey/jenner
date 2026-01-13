@@ -148,15 +148,13 @@ const TimelineSection = () => {
       id="about"
       className="relative w-full py-24 md:py-32 bg-background"
     >
-      {/* Aurora Background Layer - Centered and smaller */}
-      <div className="absolute inset-0 flex items-center justify-center overflow-hidden z-0">
-        <AuroraBackground 
-          className="w-[60%] h-[50%] opacity-30" 
-          showRadialGradient={true}
-        >
-          <div />
-        </AuroraBackground>
-      </div>
+      {/* Aurora Background Layer - Full size, more transparent */}
+      <AuroraBackground 
+        className="absolute inset-0 z-0 opacity-25" 
+        showRadialGradient={true}
+      >
+        <div />
+      </AuroraBackground>
 
       {/* Content Layer */}
       <div className="relative z-10 container mx-auto px-6">
