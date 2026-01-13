@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { MenuToggleIcon } from "@/components/ui/menu-toggle-icon";
 import { cn } from "@/lib/utils";
+import { createPortal } from "react-dom";
 
 const menuItems = [
   { name: "מי אנחנו", href: "#about" },
@@ -18,23 +19,90 @@ const Logo = ({ className }: { className?: string }) => {
   );
 };
 
-const Navbar = () => {
-  const [menuState, setMenuState] = useState(false);
+function useScrollDirection(threshold: number = 10) {
+  const [isVisible, setIsVisible] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const handleScroll = useCallback(() => {
+    const currentScrollY = window.scrollY;
+    
+    // Check if scrolled past threshold for background styling
+    setIsScrolled(currentScrollY > 50);
+    
+    // Determine scroll direction
+    if (Math.abs(currentScrollY - lastScrollY) < threshold) {
+      return;
+    }
+    
+    if (currentScrollY <= 0) {
+      // At top of page - always show
+      setIsVisible(true);
+    } else if (currentScrollY > lastScrollY) {
+      // Scrolling down - hide
+      setIsVisible(false);
+    } else {
+      // Scrolling up - show
+      setIsVisible(true);
+    }
+    
+    setLastScrollY(currentScrollY);
+  }, [lastScrollY, threshold]);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [handleScroll]);
+
+  return { isVisible, isScrolled };
+}
+
+type MobileMenuProps = React.ComponentProps<'div'> & {
+  open: boolean;
+};
+
+function MobileMenu({ open, children, className, ...props }: MobileMenuProps) {
+  if (!open || typeof window === 'undefined') return null;
+
+  return createPortal(
+    <div
+      className={cn(
+        "fixed inset-0 z-40 flex flex-col bg-background/95 backdrop-blur-lg",
+        className
+      )}
+      {...props}
+    >
+      <div className="flex flex-1 flex-col justify-center px-6">
+        {children}
+      </div>
+    </div>,
+    document.body
+  );
+}
+
+const Navbar = () => {
+  const [menuState, setMenuState] = useState(false);
+  const { isVisible, isScrolled } = useScrollDirection();
+
+  useEffect(() => {
+    if (menuState) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [menuState]);
 
   return (
     <header>
       <nav
         data-state={isScrolled ? "scrolled" : undefined}
-        className="fixed z-50 w-full px-2 group"
+        className={cn(
+          "fixed z-50 w-full px-2 transition-transform duration-300",
+          !isVisible && !menuState && "-translate-y-full"
+        )}
       >
         <div
           className={cn(
@@ -56,20 +124,11 @@ const Navbar = () => {
               <button
                 onClick={() => setMenuState(!menuState)}
                 aria-label={menuState ? "סגור תפריט" : "פתח תפריט"}
-                className="relative z-20 -m-2.5 -ml-4 block cursor-pointer p-2.5 lg:hidden"
+                aria-expanded={menuState}
+                aria-controls="mobile-menu"
+                className="relative z-50 -m-2.5 -ml-4 block cursor-pointer p-2.5 lg:hidden"
               >
-                <Menu
-                  className={cn(
-                    "size-6 text-foreground transition-all duration-200",
-                    menuState && "rotate-180 scale-0 opacity-0"
-                  )}
-                />
-                <X
-                  className={cn(
-                    "absolute inset-0 m-auto size-6 text-foreground transition-all duration-200",
-                    !menuState && "-rotate-180 scale-0 opacity-0"
-                  )}
-                />
+                <MenuToggleIcon open={menuState} className="size-6 text-foreground" />
               </button>
             </div>
 
@@ -89,38 +148,41 @@ const Navbar = () => {
               </ul>
             </div>
 
-            {/* Mobile menu */}
-            <div
-              className={cn(
-                "w-full flex-wrap items-center justify-end space-y-6 pt-6 pb-2 lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:p-0",
-                menuState ? "flex" : "hidden lg:flex"
-              )}
-            >
-              <div className="lg:hidden w-full text-center">
-                <ul className="space-y-4 text-lg font-medium">
-                  {menuItems.map((item, index) => (
-                    <li key={index}>
-                      <a
-                        href={item.href}
-                        onClick={() => setMenuState(false)}
-                        className="text-muted-foreground hover:text-foreground transition-colors duration-300 block"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="flex w-full flex-col gap-3 sm:flex-row lg:w-fit pt-4 lg:pt-0">
-                <Button asChild size="default" className="rounded-full w-full lg:w-auto">
-                  <a href="#community">הצטרפו אלינו</a>
-                </Button>
-              </div>
+            {/* Desktop CTA */}
+            <div className="hidden lg:flex lg:w-fit lg:gap-6">
+              <Button asChild size="default" className="rounded-full">
+                <a href="#community">הצטרפו אלינו</a>
+              </Button>
             </div>
           </div>
         </div>
       </nav>
+
+      {/* Mobile menu portal */}
+      <MobileMenu open={menuState}>
+        <nav className="space-y-8 text-center">
+          {menuItems.map((item, index) => (
+            <a
+              key={index}
+              href={item.href}
+              onClick={() => setMenuState(false)}
+              className="block text-2xl font-medium text-foreground hover:text-primary transition-colors"
+            >
+              {item.name}
+            </a>
+          ))}
+        </nav>
+        <div className="mt-12 flex flex-col gap-4 px-6">
+          <Button
+            asChild
+            size="lg"
+            className="rounded-full w-full"
+            onClick={() => setMenuState(false)}
+          >
+            <a href="#community">הצטרפו אלינו</a>
+          </Button>
+        </div>
+      </MobileMenu>
     </header>
   );
 };
