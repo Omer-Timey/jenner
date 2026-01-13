@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Timeline } from "@/components/ui/timeline";
+import { AuroraBackground } from "@/components/ui/aurora-background";
 
 const timelineData = [
   {
@@ -145,12 +146,15 @@ const TimelineSection = () => {
   return (
     <section
       id="about"
-      className="relative w-full py-24 md:py-32"
-      style={{
-        background: "var(--gradient-radial)",
-      }}
+      className="relative w-full py-24 md:py-32 bg-background"
     >
-      <div className="container mx-auto px-6">
+      {/* Aurora Background Layer */}
+      <AuroraBackground className="absolute inset-0 z-0" showRadialGradient={true}>
+        <div />
+      </AuroraBackground>
+
+      {/* Content Layer */}
+      <div className="relative z-10 container mx-auto px-6">
         {/* Header */}
         <motion.div
           ref={headerRef}
