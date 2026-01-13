@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Users, MessageCircle, Mail } from "lucide-react";
+import { Users, Mail } from "lucide-react";
+import { TextEffect } from "@/components/ui/text-effect";
 
 const CommunitySection = () => {
   const ref = useRef(null);
@@ -30,25 +31,25 @@ const CommunitySection = () => {
       {/* Content */}
       <div ref={ref} className="relative z-10 container mx-auto px-6 py-24">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.h2
-            initial={{ opacity: 0, y: 40 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8 }}
+          <TextEffect
+            preset="blur"
+            trigger={isInView}
+            as="h2"
             className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-8"
           >
             הצטרפו לקהילה
-          </motion.h2>
+          </TextEffect>
 
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
+          <TextEffect
+            per="line"
+            preset="blur"
+            trigger={isInView}
+            delay={0.3}
+            as="p"
             className="text-lg md:text-xl text-white/90 leading-relaxed mb-12 max-w-3xl mx-auto"
           >
-            זה המקום שבו ידע הופך לכוח. הצטרפו לשיח פתוח על מחקרים פורצי דרך, 
-            שתפו תובנות וקבלו כלים מעשיים. בקהילה שלנו, המדע והאנושיות נפגשים 
-            כדי ליצור חזית מאוחדת, חוקרת ותומכת.
-          </motion.p>
+            זה המקום שבו ידע הופך לכוח. הצטרפו לשיח פתוח על מחקרים פורצי דרך, שתפו תובנות וקבלו כלים מעשיים. בקהילה שלנו, המדע והאנושיות נפגשים כדי ליצור חזית מאוחדת, חוקרת ותומכת.
+          </TextEffect>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
