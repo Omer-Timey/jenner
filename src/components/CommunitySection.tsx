@@ -43,7 +43,7 @@ const CommunitySection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-12 max-w-3xl mx-auto"
+            className="text-lg md:text-xl text-white/90 leading-relaxed mb-12 max-w-3xl mx-auto"
           >
             זה המקום שבו ידע הופך לכוח. הצטרפו לשיח פתוח על מחקרים פורצי דרך, 
             שתפו תובנות וקבלו כלים מעשיים. בקהילה שלנו, המדע והאנושיות נפגשים 
