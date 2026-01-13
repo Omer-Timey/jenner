@@ -9,8 +9,8 @@ const timelineData = [
     title: "סוף 2023",
     content: (
       <div>
-        <h4 className="text-xl md:text-2xl font-bold text-foreground mb-6 text-right">לחימה בעזה</h4>
-        <div className="grid grid-cols-2 gap-4 max-w-md">
+        <h4 className="text-2xl md:text-4xl font-normal text-foreground mb-6 text-right">לחימה בעזה</h4>
+        <div className="grid grid-cols-2 gap-4 max-w-2xl">
           <img
             src="https://images.unsplash.com/photo-1580130732478-4e339fb6836f?w=500&h=500&fit=crop&q=80"
             alt="לחימה בעזה"
@@ -31,8 +31,8 @@ const timelineData = [
     title: "אפר׳ 2024",
     content: (
       <div>
-        <h4 className="text-xl md:text-2xl font-bold text-foreground mb-6 text-right">חולה בסרטן</h4>
-        <div className="grid grid-cols-2 gap-4 max-w-md">
+        <h4 className="text-2xl md:text-4xl font-normal text-foreground mb-6 text-right">חולה בסרטן</h4>
+        <div className="grid grid-cols-2 gap-4 max-w-2xl">
           <img
             src="https://images.unsplash.com/photo-1579154204601-01588f351e67?w=500&h=500&fit=crop&q=80"
             alt="אבחון"
@@ -53,8 +53,8 @@ const timelineData = [
     title: "יול׳ 2024",
     content: (
       <div>
-        <h4 className="text-xl md:text-2xl font-bold text-foreground mb-6 text-right">רץ 60 ק"מ יום אחרי טיפולים</h4>
-        <div className="grid grid-cols-2 gap-4 max-w-md">
+        <h4 className="text-2xl md:text-4xl font-normal text-foreground mb-6 text-right">רץ 60 ק"מ יום אחרי טיפולים</h4>
+        <div className="grid grid-cols-2 gap-4 max-w-2xl">
           <img
             src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=500&h=500&fit=crop&q=80"
             alt="ריצה"
@@ -75,8 +75,8 @@ const timelineData = [
     title: "נוב׳ 2024",
     content: (
       <div>
-        <h4 className="text-xl md:text-2xl font-bold text-foreground mb-6 text-right">שיא ישראל לחצי המרתון הכבד ביותר</h4>
-        <div className="grid grid-cols-2 gap-4 max-w-md">
+        <h4 className="text-2xl md:text-4xl font-normal text-foreground mb-6 text-right">שיא ישראל לחצי המרתון הכבד ביותר</h4>
+        <div className="grid grid-cols-2 gap-4 max-w-2xl">
           <img
             src="https://images.unsplash.com/photo-1594882645126-14020914d58d?w=500&h=500&fit=crop&q=80"
             alt="מרתון"
@@ -97,8 +97,8 @@ const timelineData = [
     title: "דצמ׳ 2024",
     content: (
       <div>
-        <h4 className="text-xl md:text-2xl font-bold text-foreground mb-6 text-right">הסרטן התפשט לריאה</h4>
-        <div className="grid grid-cols-2 gap-4 max-w-md">
+        <h4 className="text-2xl md:text-4xl font-normal text-foreground mb-6 text-right">הסרטן התפשט לריאה</h4>
+        <div className="grid grid-cols-2 gap-4 max-w-2xl">
           <img
             src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=500&h=500&fit=crop&q=80"
             alt="התמודדות"
@@ -119,8 +119,8 @@ const timelineData = [
     title: "ינו׳ 2025",
     content: (
       <div>
-        <h4 className="text-xl md:text-2xl font-bold text-foreground mb-6 text-right">טס לאליפות העולם בשחייה במי קרח</h4>
-        <div className="grid grid-cols-2 gap-4 max-w-md">
+        <h4 className="text-2xl md:text-4xl font-normal text-foreground mb-6 text-right">טס לאליפות העולם בשחייה במי קרח</h4>
+        <div className="grid grid-cols-2 gap-4 max-w-2xl">
           <img
             src="https://images.unsplash.com/photo-1530549387789-4c1017266635?w=500&h=500&fit=crop&q=80"
             alt="שחייה במי קרח"
@@ -141,8 +141,8 @@ const timelineData = [
     title: "יול׳ 2025",
     content: (
       <div>
-        <h4 className="text-xl md:text-2xl font-bold text-foreground mb-6 text-right">קובע שיא ישראל למרתון הכבד ביותר שבוצע בישראל</h4>
-        <div className="grid grid-cols-2 gap-4 max-w-md">
+        <h4 className="text-2xl md:text-4xl font-normal text-foreground mb-6 text-right">קובע שיא ישראל למרתון הכבד ביותר שבוצע בישראל</h4>
+        <div className="grid grid-cols-2 gap-4 max-w-2xl">
           <img
             src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=500&h=500&fit=crop&q=80"
             alt="מרתון כבד"
@@ -163,8 +163,8 @@ const timelineData = [
     title: "אוג׳ 2025",
     content: (
       <div>
-        <h4 className="text-xl md:text-2xl font-bold text-foreground mb-6 text-right">הסרטן מתפשט שוב פעם</h4>
-        <div className="grid grid-cols-2 gap-4 max-w-md">
+        <h4 className="text-2xl md:text-4xl font-normal text-foreground mb-6 text-right">הסרטן מתפשט שוב פעם</h4>
+        <div className="grid grid-cols-2 gap-4 max-w-2xl">
           <img
             src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=500&h=500&fit=crop&q=80"
             alt="התמודדות נוספת"
@@ -185,8 +185,8 @@ const timelineData = [
     title: "נוב׳ 2025",
     content: (
       <div>
-        <h4 className="text-xl md:text-2xl font-bold text-foreground mb-6 text-right">הקמת ג'נר</h4>
-        <div className="grid grid-cols-2 gap-4 max-w-md">
+        <h4 className="text-2xl md:text-4xl font-normal text-foreground mb-6 text-right">הקמת ג'נר</h4>
+        <div className="grid grid-cols-2 gap-4 max-w-2xl">
           <img
             src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=500&h=500&fit=crop&q=80"
             alt="הקמת ג'נר"
