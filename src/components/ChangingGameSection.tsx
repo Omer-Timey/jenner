@@ -27,13 +27,13 @@ const ChangingGameSection = () => {
       <div className="section-overlay-right" />
 
       {/* Content - aligned to top */}
-      <div ref={ref} className="relative z-10 container mx-auto px-6 pt-32 pb-24">
+      <div ref={ref} className="relative z-10 container mx-auto px-8 md:px-12 lg:px-16 pt-32 pb-24">
         <div className="max-w-2xl mr-0 ml-auto text-right">
           <motion.h2
             initial={{ opacity: 0, y: 40 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 uppercase tracking-wide"
+            className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 uppercase tracking-wide"
           >
             משנים את חוקי המשחק
           </motion.h2>
@@ -56,7 +56,7 @@ const ChangingGameSection = () => {
           >
             <a 
               href="#community" 
-              className="glass-button inline-flex items-center justify-center gap-3"
+              className="glass-button-primary inline-flex items-center justify-center gap-3"
             >
               למדו עוד
             </a>
