@@ -1,28 +1,48 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useCallback } from "react";
 import { AnimatedGroup } from "@/components/ui/animated-group";
 import { TextEffect } from "@/components/ui/text-effect";
 
 export function HeroSection() {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const isReversing = useRef(false);
+  const animationRef = useRef<number>();
+
+  const reversePlay = useCallback(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const step = 1 / 30; // ~30fps backwards
+    video.currentTime = Math.max(0, video.currentTime - step);
+
+    if (video.currentTime > 0) {
+      animationRef.current = requestAnimationFrame(reversePlay);
+    } else {
+      // Reached start, play forward again
+      isReversing.current = false;
+      video.play();
+    }
+  }, []);
 
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
 
-    const handleTimeUpdate = () => {
-      // When playing forward and reaching near the end
-      if (video.playbackRate > 0 && video.currentTime >= video.duration - 0.1) {
-        video.playbackRate = -1;
-      }
-      // When playing backward and reaching near the start
-      if (video.playbackRate < 0 && video.currentTime <= 0.1) {
-        video.playbackRate = 1;
+    const handleEnded = () => {
+      if (!isReversing.current) {
+        isReversing.current = true;
+        video.pause();
+        reversePlay();
       }
     };
 
-    video.addEventListener("timeupdate", handleTimeUpdate);
-    return () => video.removeEventListener("timeupdate", handleTimeUpdate);
-  }, []);
+    video.addEventListener("ended", handleEnded);
+    return () => {
+      video.removeEventListener("ended", handleEnded);
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
+    };
+  }, [reversePlay]);
 
   return (
     <main className="relative min-h-screen overflow-hidden">
