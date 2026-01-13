@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+/* Rubik font loaded via index.html link tag for reliability */
 
 /* Metabolic Storm Design System - Dark, Dramatic, Prestigious */
 
@@ -64,8 +64,12 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Rubik', system-ui, -apple-system, sans-serif;
+    font-family: 'Rubik', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
     direction: rtl;
+  }
+
+  h1, h2, h3, h4, h5, h6, p, span, a, button, input, label {
+    font-family: 'Rubik', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   }
 }
 
