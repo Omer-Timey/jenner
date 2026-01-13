@@ -1,17 +1,15 @@
+import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Timeline } from "@/components/ui/timeline";
 import { EtheralShadow } from "@/components/ui/ethereal-shadow";
-import { TextEffect } from "@/components/ui/text-effect";
 
 const timelineData = [
   {
     title: "2018",
     content: (
       <div>
-        <h4 className="text-xl md:text-2xl font-bold text-foreground mb-6 text-right">
-          תחילת המסע
-        </h4>
+        <h4 className="text-xl md:text-2xl font-bold text-foreground mb-6 text-right">תחילת המסע</h4>
         <div className="grid grid-cols-2 gap-4">
           <img
             src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=500&h=500&fit=crop&q=80"
@@ -45,9 +43,7 @@ const timelineData = [
     title: "2020",
     content: (
       <div>
-        <h4 className="text-xl md:text-2xl font-bold text-foreground mb-6 text-right">
-          פריצת הדרך
-        </h4>
+        <h4 className="text-xl md:text-2xl font-bold text-foreground mb-6 text-right">פריצת הדרך</h4>
         <div className="grid grid-cols-2 gap-4">
           <img
             src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=500&h=500&fit=crop&q=80"
@@ -75,9 +71,7 @@ const timelineData = [
     title: "2022",
     content: (
       <div>
-        <h4 className="text-xl md:text-2xl font-bold text-foreground mb-6 text-right">
-          הקמת הקהילה
-        </h4>
+        <h4 className="text-xl md:text-2xl font-bold text-foreground mb-6 text-right">הקמת הקהילה</h4>
         <div className="grid grid-cols-2 gap-4">
           <img
             src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=500&h=500&fit=crop&q=80"
@@ -111,9 +105,7 @@ const timelineData = [
     title: "2024",
     content: (
       <div>
-        <h4 className="text-xl md:text-2xl font-bold text-foreground mb-6 text-right">
-          סערה מטבולית
-        </h4>
+        <h4 className="text-xl md:text-2xl font-bold text-foreground mb-6 text-right">סערה מטבולית</h4>
         <div className="grid grid-cols-2 gap-4">
           <img
             src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&h=500&fit=crop&q=80"
@@ -144,10 +136,7 @@ const TimelineSection = () => {
   const isHeaderInView = useInView(headerRef, { once: true, margin: "-100px" });
 
   return (
-    <section
-      id="about"
-      className="relative w-full py-24 md:py-32 bg-background"
-    >
+    <section id="about" className="relative w-full py-24 md:py-32 bg-background">
       {/* Ethereal Shadow Background */}
       <EtheralShadow
         className="absolute inset-0 z-0 opacity-40"
@@ -160,27 +149,15 @@ const TimelineSection = () => {
       {/* Content Layer */}
       <div className="relative z-10 container mx-auto px-6">
         {/* Header */}
-        <div ref={headerRef} className="text-center mb-6">
-          <TextEffect
-            preset="blur"
-            trigger={isHeaderInView}
-            as="h2"
-            className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-8"
-          >
-            מי אני?
-          </TextEffect>
-          <TextEffect
-            per="line"
-            preset="blur"
-            trigger={isHeaderInView}
-            delay={0.3}
-            as="p"
-            className="text-lg md:text-xl text-white/90 leading-relaxed max-w-4xl mx-auto"
-          >
-            {`אני יואב שריקר, לוחם לשעבר שאובחן בסרטן בגיל 21, והמחלה סימנה עבורי נקודת מפנה פיזית ותודעתית.
-כיום אני עוסק במחקר, בעשייה פיזית קיצונית ובפיתוח כלים וידע לאנשים המתמודדים עם מחלה ואתגר, מתוך מטרה להבין מה באמת אפשרי בזמן משבר.`}
-          </TextEffect>
-        </div>
+        <motion.div
+          ref={headerRef}
+          initial={{ opacity: 0, y: 40 }}
+          animate={isHeaderInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-10"
+        >
+          <h2 className="text-5xl md:text-6xl lg:text-8xl font-bold text-foreground">מי אני?</h2>
+        </motion.div>
 
         {/* Timeline */}
         <Timeline data={timelineData} />
