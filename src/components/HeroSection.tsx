@@ -19,9 +19,9 @@ export function HeroSection() {
           <source src="/1 section video.mp4" type="video/mp4" />
         </video>
         {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/50" />
-        {/* Inner shadow from bottom */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-black/20" />
+        {/* Inner shadow from bottom - weaker gradient */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
       </div>
       
       <section className="relative z-10 flex min-h-screen items-center justify-center">

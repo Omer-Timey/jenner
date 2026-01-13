@@ -23,7 +23,8 @@ const ChangingGameSection = () => {
       </video>
 
       {/* Gradient Overlay */}
-      <div className="section-overlay" />
+      {/* Right-to-left gradient for right-aligned content */}
+      <div className="section-overlay-right" />
 
       {/* Content */}
       <div ref={ref} className="relative z-10 container mx-auto px-6 py-24">

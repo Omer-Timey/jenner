@@ -24,7 +24,8 @@ const CommunitySection = () => {
       </video>
 
       {/* Gradient Overlay */}
-      <div className="section-overlay" />
+      {/* Bottom-to-top gradient for centered content */}
+      <div className="section-overlay-center" />
 
       {/* Content */}
       <div ref={ref} className="relative z-10 container mx-auto px-6 py-24">
