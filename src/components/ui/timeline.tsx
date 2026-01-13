@@ -59,7 +59,7 @@ export const Timeline = ({
           <motion.div style={{
           height: heightTransform,
           opacity: opacityTransform
-        }} className="absolute inset-x-0 top-0 w-[2px] bg-gradient-to-t from-purple-500 via-blue-500 to-transparent from-[0%] via-[10%] rounded-full shadow-[0_0_8px_rgba(147,51,234,0.5),0_0_16px_rgba(59,130,246,0.3)]" />
+        }} className="absolute inset-x-0 top-0 w-[2px] bg-gradient-to-t from-emerald-500 via-green-400 to-transparent from-[0%] via-[10%] rounded-full shadow-[0_0_8px_rgba(16,185,129,0.5),0_0_16px_rgba(74,222,128,0.3)]" />
         </div>
       </div>
     </div>;
