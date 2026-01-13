@@ -16,7 +16,7 @@ export function HeroSection() {
           playsInline
           className="h-full w-full object-cover"
         >
-          <source src="/1 section video.mp4" type="video/mp4" />
+          <source src="/1-section-video.mp4" type="video/mp4" />
         </video>
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-black/30" />
