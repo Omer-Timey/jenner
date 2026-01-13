@@ -1,66 +1,27 @@
-import { useRef, useEffect, useCallback } from "react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import { AnimatedGroup } from "@/components/ui/animated-group";
 import { TextEffect } from "@/components/ui/text-effect";
 
+
 export function HeroSection() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const isReversing = useRef(false);
-  const animationRef = useRef<number>();
-
-  const reversePlay = useCallback(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const step = 1 / 30; // ~30fps backwards
-    video.currentTime = Math.max(0, video.currentTime - step);
-
-    if (video.currentTime > 0) {
-      animationRef.current = requestAnimationFrame(reversePlay);
-    } else {
-      // Reached start, play forward again
-      isReversing.current = false;
-      video.play();
-    }
-  }, []);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const handleEnded = () => {
-      if (!isReversing.current) {
-        isReversing.current = true;
-        video.pause();
-        reversePlay();
-      }
-    };
-
-    video.addEventListener("ended", handleEnded);
-    return () => {
-      video.removeEventListener("ended", handleEnded);
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
-      }
-    };
-  }, [reversePlay]);
-
   return (
     <main className="relative min-h-screen overflow-hidden">
       {/* Background Video */}
       <div className="absolute inset-0 overflow-hidden">
         <video
-          ref={videoRef}
           autoPlay
           muted
+          loop
           playsInline
           className="h-full w-full object-cover"
         >
           <source src="/1 section video.mp4" type="video/mp4" />
         </video>
         {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-black/50" />
         {/* Inner shadow from bottom */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
       </div>
       
       <section className="relative z-10 flex min-h-screen items-center justify-center">
