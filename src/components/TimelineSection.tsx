@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Timeline } from "@/components/ui/timeline";
-import { EtherealShadow } from "@/components/ui/ethereal-shadow";
+import { EtheralShadow } from "@/components/ui/ethereal-shadow";
 
 const timelineData = [
   {
@@ -149,11 +149,12 @@ const TimelineSection = () => {
       className="relative w-full py-24 md:py-32 bg-background"
     >
       {/* Ethereal Shadow Background */}
-      <EtherealShadow
-        className="absolute inset-0 z-0 opacity-40"
-        color="rgba(147, 51, 234, 0.6)"
-        animation={{ scale: 50, speed: 30 }}
-        noise={{ opacity: 0.03, scale: 1 }}
+      <EtheralShadow
+        className="absolute inset-0 z-0"
+        color="rgba(128, 128, 128, 1)"
+        animation={{ scale: 100, speed: 90 }}
+        noise={{ opacity: 1, scale: 1.2 }}
+        sizing="fill"
       />
 
       {/* Content Layer */}
