@@ -160,14 +160,25 @@ const TimelineSection = () => {
       {/* Content Layer */}
       <div className="relative z-10 container mx-auto px-6">
         {/* Header */}
-        <div ref={headerRef} className="text-center mb-10">
+        <div ref={headerRef} className="text-center mb-16">
           <TextEffect
             preset="blur"
             trigger={isHeaderInView}
             as="h2"
-            className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground"
+            className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-8"
           >
             מי אני?
+          </TextEffect>
+          <TextEffect
+            per="line"
+            preset="blur"
+            trigger={isHeaderInView}
+            delay={0.3}
+            as="p"
+            className="text-lg md:text-xl text-white/90 leading-relaxed max-w-4xl mx-auto"
+          >
+            {`אני יואב שריקר, לוחם לשעבר שאובחן בסרטן בגיל 21, והמחלה סימנה עבורי נקודת מפנה פיזית ותודעתית.
+כיום אני עוסק במחקר, בעשייה פיזית קיצונית ובפיתוח כלים וידע לאנשים המתמודדים עם מחלה ואתגר, מתוך מטרה להבין מה באמת אפשרי בזמן משבר.`}
           </TextEffect>
         </div>
 
