@@ -1,27 +1,46 @@
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
+import { useRef, useEffect } from "react";
 import { AnimatedGroup } from "@/components/ui/animated-group";
 import { TextEffect } from "@/components/ui/text-effect";
 
-
 export function HeroSection() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const handleTimeUpdate = () => {
+      // When playing forward and reaching near the end
+      if (video.playbackRate > 0 && video.currentTime >= video.duration - 0.1) {
+        video.playbackRate = -1;
+      }
+      // When playing backward and reaching near the start
+      if (video.playbackRate < 0 && video.currentTime <= 0.1) {
+        video.playbackRate = 1;
+      }
+    };
+
+    video.addEventListener("timeupdate", handleTimeUpdate);
+    return () => video.removeEventListener("timeupdate", handleTimeUpdate);
+  }, []);
+
   return (
     <main className="relative min-h-screen overflow-hidden">
       {/* Background Video */}
       <div className="absolute inset-0 overflow-hidden">
         <video
+          ref={videoRef}
           autoPlay
           muted
-          loop
           playsInline
           className="h-full w-full object-cover"
         >
           <source src="/1 section video.mp4" type="video/mp4" />
         </video>
         {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/30" />
         {/* Inner shadow from bottom */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
       </div>
       
       <section className="relative z-10 flex min-h-screen items-center justify-center">
