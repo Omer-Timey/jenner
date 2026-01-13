@@ -150,10 +150,10 @@ const TimelineSection = () => {
     >
       {/* Ethereal Shadow Background */}
       <EtheralShadow
-        className="absolute inset-0 z-0"
-        color="rgba(128, 128, 128, 1)"
+        className="absolute inset-0 z-0 opacity-20"
+        color="rgba(128, 128, 128, 0.5)"
         animation={{ scale: 100, speed: 90 }}
-        noise={{ opacity: 1, scale: 1.2 }}
+        noise={{ opacity: 0.3, scale: 1.2 }}
         sizing="fill"
       />
 
