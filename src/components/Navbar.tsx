@@ -39,8 +39,8 @@ const Navbar = () => {
         <div
           className={cn(
             "mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-12",
-            isScrolled &&
-              "bg-background/50 max-w-4xl rounded-full border border-border backdrop-blur-lg lg:px-5"
+            (isScrolled || menuState) &&
+              "bg-background/90 max-w-4xl rounded-2xl border border-border backdrop-blur-lg lg:px-5 lg:rounded-full"
           )}
         >
           <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
@@ -92,12 +92,12 @@ const Navbar = () => {
             {/* Mobile menu */}
             <div
               className={cn(
-                "bg-background/95 backdrop-blur-xl mb-6 w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border border-border p-6 shadow-2xl md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none lg:backdrop-blur-none",
+                "w-full flex-wrap items-center justify-end space-y-6 pt-6 pb-2 lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:p-0",
                 menuState ? "flex" : "hidden lg:flex"
               )}
             >
-              <div className="lg:hidden w-full">
-                <ul className="space-y-6 text-base font-medium">
+              <div className="lg:hidden w-full text-center">
+                <ul className="space-y-4 text-lg font-medium">
                   {menuItems.map((item, index) => (
                     <li key={index}>
                       <a
@@ -112,8 +112,8 @@ const Navbar = () => {
                 </ul>
               </div>
 
-              <div className="flex w-full flex-col gap-3 sm:flex-row lg:w-fit">
-                <Button asChild size="sm" className="rounded-full">
+              <div className="flex w-full flex-col gap-3 sm:flex-row lg:w-fit pt-4 lg:pt-0">
+                <Button asChild size="default" className="rounded-full w-full lg:w-auto">
                   <a href="#community">הצטרפו אלינו</a>
                 </Button>
               </div>
