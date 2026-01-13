@@ -166,7 +166,7 @@ const TimelineSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-10"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground">
             מי אני?
           </h2>
         </motion.div>
