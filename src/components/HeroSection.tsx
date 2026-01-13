@@ -2,30 +2,27 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { AnimatedGroup } from "@/components/ui/animated-group";
 import { TextEffect } from "@/components/ui/text-effect";
-import heroBg from "@/assets/hero-bg.jpg";
+
 
 export function HeroSection() {
   return (
     <main className="relative min-h-screen overflow-hidden">
-      {/* Background image placeholder - will be replaced with video in future */}
+      {/* Background Video */}
       <div className="absolute inset-0 overflow-hidden">
-        <img
-          src={heroBg}
-          alt="רקע"
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
           className="h-full w-full object-cover"
-        />
+        >
+          <source src="/1 section video.mp4" type="video/mp4" />
+        </video>
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-black/50" />
         {/* Inner shadow from bottom */}
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
       </div>
-      {/* 
-        Future video implementation:
-        Replace the background <img> above with:
-        <video autoPlay muted loop playsInline className="size-full object-cover">
-          <source src="/video.mp4" type="video/mp4" />
-        </video>
-      */}
       
       <section className="relative z-10 flex min-h-screen items-center justify-center">
         <div className="mx-auto max-w-7xl px-6">

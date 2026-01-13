@@ -19,12 +19,8 @@ const CommunitySection = () => {
         loop
         playsInline
         className="absolute inset-0 w-full h-full object-cover"
-        poster="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1920&q=80"
       >
-        <source
-          src="https://cdn.coverr.co/videos/coverr-people-working-together-6387/1080p.mp4"
-          type="video/mp4"
-        />
+        <source src="/3 section video.mp4" type="video/mp4" />
       </video>
 
       {/* Gradient Overlay */}
