@@ -43,12 +43,12 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             className="flex justify-start pt-10 md:pt-40 md:gap-10 relative"
           >
             {/* Pin - absolutely positioned to center on the line */}
-            <div className="absolute right-[13px] md:right-[13px] top-10 md:top-40 h-10 w-10 rounded-full bg-background flex items-center justify-center z-50">
+            <div className="absolute right-[13px] md:right-[13px] top-10 md:top-40 h-10 w-10 rounded-full bg-background flex items-center justify-center z-10">
               <div className="h-4 w-4 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,0.5),0_0_20px_rgba(59,130,246,0.3)]" />
             </div>
 
             {/* Title container - sticky, positioned to the left of pin */}
-            <div className="sticky flex flex-row z-40 items-center top-40 self-start justify-end gap-4 w-auto pr-16 md:pr-24">
+            <div className="sticky flex flex-row z-10 items-center top-40 self-start justify-end gap-4 w-auto pr-16 md:pr-24">
               <h3 className="hidden md:block text-xl md:text-5xl font-bold text-white">
                 {item.title}
               </h3>

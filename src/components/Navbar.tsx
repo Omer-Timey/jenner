@@ -34,7 +34,7 @@ const Navbar = () => {
     <header>
       <nav
         data-state={isScrolled ? "scrolled" : undefined}
-        className="fixed z-20 w-full px-2 group"
+        className="fixed z-50 w-full px-2 group"
       >
         <div
           className={cn(
