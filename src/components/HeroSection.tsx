@@ -3,19 +3,20 @@ import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AnimatedGroup } from "@/components/ui/animated-group";
 import { TextEffect } from "@/components/ui/text-effect";
+import heroBg from "@/assets/hero-bg.jpg";
 
 export function HeroSection() {
   return (
     <main className="relative min-h-screen overflow-hidden">
       {/* Background image placeholder - will be replaced with video in future */}
-      <div className="absolute inset-0 -z-10 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1576086213369-97a306d36557?w=2000&q=80"
+          src={heroBg}
           alt="רקע"
           className="h-full w-full object-cover"
         />
         {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/70" />
+        <div className="absolute inset-0 bg-black/60" />
       </div>
       {/* 
         Future video implementation:
