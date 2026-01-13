@@ -37,7 +37,7 @@ export const Timeline = ({
             </div>
 
             {/* Title container - sticky, positioned to the left of pin */}
-            <div className="sticky flex flex-row z-10 items-center top-40 self-start justify-end gap-4 min-w-[120px] md:min-w-[180px] pr-16 md:pr-24">
+            <div className="sticky flex flex-row z-10 items-center top-40 self-start justify-end gap-4 min-w-[180px] md:min-w-[320px] pr-16 md:pr-24">
               <h3 className="hidden md:block text-xl md:text-5xl font-bold text-white whitespace-nowrap">
                 {item.title}
               </h3>
