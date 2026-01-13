@@ -6,7 +6,7 @@ import { TextEffect } from "@/components/ui/text-effect";
 
 const timelineData = [
   {
-    title: "2023",
+    title: "סוף 2023",
     content: (
       <div>
         <h4 className="text-xl md:text-2xl font-bold text-foreground mb-6 text-right">לחימה בעזה</h4>
