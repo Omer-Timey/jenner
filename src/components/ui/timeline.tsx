@@ -38,14 +38,14 @@ export const Timeline = ({
 
             {/* Title container - sticky, positioned to the left of pin */}
             <div className="sticky flex flex-row z-10 items-center top-40 self-start justify-end gap-4 min-w-[180px] md:min-w-[320px] pr-16 md:pr-24">
-              <h3 className="hidden md:block text-3xl md:text-6xl font-normal text-white whitespace-nowrap">
+              <h3 className="hidden md:block text-xl md:text-5xl font-bold text-white whitespace-nowrap">
                 {item.title}
               </h3>
             </div>
 
             {/* Content area */}
             <div className="relative pl-20 md:pl-4 w-full">
-              <h3 className="md:hidden block text-3xl mb-4 text-left font-normal text-white">
+              <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-white">
                 {item.title}
               </h3>
               {item.content}
