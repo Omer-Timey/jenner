@@ -41,7 +41,7 @@ const Navbar = () => {
           className={cn(
             "mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-12",
             isScrolled &&
-              "bg-background/50 max-w-4xl rounded-2xl border border-border backdrop-blur-lg lg:px-5"
+              "bg-background/50 max-w-4xl rounded-full border border-border backdrop-blur-lg lg:px-5"
           )}
         >
           <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
@@ -114,7 +114,7 @@ const Navbar = () => {
               </div>
 
               <div className="flex w-full flex-col gap-3 sm:flex-row lg:w-fit">
-                <Button asChild size="sm" className="rounded-xl">
+                <Button asChild size="sm" className="rounded-full">
                   <a href="#community">הצטרפו אלינו</a>
                 </Button>
               </div>
