@@ -43,7 +43,7 @@
     --glass-border: 0 0% 100% / 0.1;
     --glass-hover: 0 0% 100% / 0.15;
     
-    --gradient-overlay: linear-gradient(to top, hsl(0 0% 0% / 0.95) 0%, hsl(0 0% 0% / 0.7) 40%, hsl(0 0% 0% / 0.4) 100%);
+    --gradient-overlay: linear-gradient(to top, hsl(0 0% 0% / 0.7) 0%, hsl(0 0% 0% / 0.4) 40%, hsl(0 0% 0% / 0.15) 100%);
     --gradient-radial: radial-gradient(ellipse at center, hsl(0 0% 8%) 0%, hsl(0 0% 0%) 100%);
   }
 
