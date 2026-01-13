@@ -30,7 +30,7 @@ export function HeroSection() {
             <TextEffect
               preset="blur"
               as="h1"
-              className="text-4xl font-bold tracking-tight text-balance md:text-6xl lg:text-7xl text-white"
+              className="text-5xl font-bold tracking-tight text-balance md:text-7xl lg:text-8xl text-white"
             >
               המלחמה המחודשת בסרטן
             </TextEffect>
@@ -40,7 +40,7 @@ export function HeroSection() {
               preset="blur"
               delay={0.5}
               as="p"
-              className="mx-auto mt-8 max-w-2xl text-lg text-balance text-white/80"
+              className="mx-auto mt-8 max-w-3xl text-xl md:text-2xl text-balance text-white/80"
             >
               סערה מטבולית הוקמה מתוך האמונה שהמלחמה בסרטן זקוקה לחזית חדשה - שמבוססת על ביולוגיה, חשיבה מחודשת והבנה עמוקה של מנגנוני המחלה.
             </TextEffect>
