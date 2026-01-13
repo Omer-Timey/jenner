@@ -33,16 +33,18 @@ const ChangingGameSection = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 uppercase tracking-wide"
+            className="text-5xl md:text-7xl lg:text-8xl text-foreground mb-6 tracking-wide"
           >
-            משנים את חוקי המשחק
+            <span className="font-normal">משנים את</span>
+            <br />
+            <span className="font-bold">חוקי המשחק</span>
           </motion.h2>
 
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-base md:text-lg text-white/90 leading-relaxed mb-8"
+            className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8"
           >
             הופכים את המלחמה המחודשת בסרטן לחלק מהשגרה: מה עושים ביום-יום, 
             איך מדברים עם הצוות הרפואי, ואיך לוקחים את המושכות לידינו - 
