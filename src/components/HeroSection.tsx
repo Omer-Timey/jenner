@@ -6,53 +6,27 @@ import { TextEffect } from "@/components/ui/text-effect";
 
 export function HeroSection() {
   return (
-    <main className="overflow-hidden">
-      <div
-        aria-hidden
-        className="absolute inset-0 isolate hidden opacity-65 contain-strict lg:block"
-      >
-        <div className="w-140 h-320 -translate-y-87.5 absolute left-0 top-0 -rotate-45 rounded-full bg-[radial-gradient(68.54%_68.72%_at_55.02%_31.46%,hsla(0,0%,85%,.08)_0,hsla(0,0%,55%,.02)_50%,hsla(0,0%,45%,0)_80%)]" />
-        <div className="h-320 absolute left-0 top-0 w-60 -rotate-45 rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.06)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)] [translate:5%_-50%]" />
-        <div className="h-320 -translate-y-87.5 absolute left-0 top-0 w-60 -rotate-45 bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.04)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)]" />
+    <main className="relative min-h-screen overflow-hidden">
+      {/* Background image placeholder - will be replaced with video in future */}
+      <div className="absolute inset-0 -z-30">
+        <img
+          src="https://images.unsplash.com/photo-1576086213369-97a306d36557?w=2000&q=80"
+          alt="רקע"
+          className="size-full object-cover"
+        />
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/70" />
       </div>
+      {/* 
+        Future video implementation:
+        Replace the background <img> above with:
+        <video autoPlay muted loop playsInline className="size-full object-cover">
+          <source src="/video.mp4" type="video/mp4" />
+        </video>
+      */}
+      
       <section>
         <div className="relative pt-24 md:pt-36">
-          <AnimatedGroup
-            variants={{
-              container: {
-                visible: {
-                  transition: {
-                    delayChildren: 1,
-                  },
-                },
-              },
-              item: {
-                hidden: {
-                  opacity: 0,
-                  y: 20,
-                },
-                visible: {
-                  opacity: 1,
-                  y: 0,
-                  transition: {
-                    type: "spring",
-                    bounce: 0.3,
-                    duration: 2,
-                  },
-                },
-              },
-            }}
-            className="absolute inset-0 -z-20"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=2940&q=80"
-              alt="רקע מדעי"
-              className="absolute inset-x-0 top-56 -z-20 hidden lg:top-32 lg:block"
-              width="3276"
-              height="1500"
-            />
-          </AnimatedGroup>
-          <div className="absolute inset-0 -z-10 size-full [background:radial-gradient(125%_125%_at_50%_100%,transparent_0%,var(--color-background)_75%)]" />
           <div className="mx-auto max-w-7xl px-6">
             <div className="text-center sm:mx-auto lg:mr-auto lg:mt-0">
               <AnimatedGroup preset="fade">
@@ -109,24 +83,6 @@ export function HeroSection() {
               </AnimatedGroup>
             </div>
           </div>
-
-          {/* Video placeholder section - prepared for future video */}
-          <AnimatedGroup preset="blur-slide">
-            <div className="relative mx-auto mt-16 max-w-6xl px-6 lg:mt-20">
-              <div className="relative">
-                <div className="bg-linear-to-b absolute inset-0 z-10 from-transparent from-35% to-background" />
-                {/* Video placeholder - replace with actual video element when ready */}
-                <div className="relative aspect-video w-full overflow-hidden rounded-2xl border border-border/50 bg-background/50 backdrop-blur-sm">
-                  <img
-                    className="size-full object-cover"
-                    src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=2000&q=80"
-                    alt="מחקר סרטן"
-                  />
-                  {/* Future video element will go here */}
-                </div>
-              </div>
-            </div>
-          </AnimatedGroup>
         </div>
       </section>
     </main>
