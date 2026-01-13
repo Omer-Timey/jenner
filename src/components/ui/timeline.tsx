@@ -42,21 +42,21 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             key={index}
             className="flex justify-start pt-10 md:pt-40 md:gap-10"
           >
-            {/* Pin and title container - sticky */}
-            <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
-              {/* Pin - positioned exactly on the line */}
-              <div className="h-10 absolute right-3 md:right-3 w-10 rounded-full bg-background flex items-center justify-center">
-                <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700" />
-              </div>
+            {/* Pin and title container - sticky, horizontal layout */}
+            <div className="sticky flex flex-row z-40 items-center top-40 self-start justify-end gap-4 w-auto">
               {/* Title - to the left of pin */}
-              <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-neutral-500 dark:text-neutral-500">
+              <h3 className="hidden md:block text-xl md:text-5xl font-bold text-white">
                 {item.title}
               </h3>
+              {/* Pin - on the right side, on the line */}
+              <div className="h-10 w-10 rounded-full bg-background flex items-center justify-center">
+                <div className="h-4 w-4 rounded-full bg-white" />
+              </div>
             </div>
 
             {/* Content area */}
             <div className="relative pl-20 md:pl-4 w-full">
-              <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500">
+              <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-white">
                 {item.title}
               </h3>
               {item.content}
