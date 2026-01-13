@@ -40,15 +40,15 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         {data.map((item, index) => (
           <div
             key={index}
-            className="flex justify-start pt-10 md:pt-40 md:gap-10"
+            className="flex justify-start pt-10 md:pt-40 md:gap-10 relative"
           >
-            {/* Pin and title container - sticky, horizontal layout */}
-            <div className="sticky flex flex-row z-40 items-center top-40 self-start justify-start gap-4 w-auto">
-              {/* Pin - on the left */}
-              <div className="h-10 w-10 rounded-full bg-background flex items-center justify-center">
-                <div className="h-4 w-4 rounded-full bg-white" />
-              </div>
-              {/* Title - to the right of pin */}
+            {/* Pin - absolutely positioned to center on the line */}
+            <div className="absolute right-[13px] md:right-[13px] top-10 md:top-40 h-10 w-10 rounded-full bg-background flex items-center justify-center z-50">
+              <div className="h-4 w-4 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,0.5),0_0_20px_rgba(59,130,246,0.3)]" />
+            </div>
+
+            {/* Title container - sticky, positioned to the left of pin */}
+            <div className="sticky flex flex-row z-40 items-center top-40 self-start justify-end gap-4 w-auto pr-16 md:pr-24">
               <h3 className="hidden md:block text-xl md:text-5xl font-bold text-white">
                 {item.title}
               </h3>
@@ -76,7 +76,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               height: heightTransform,
               opacity: opacityTransform,
             }}
-            className="absolute inset-x-0 top-0 w-[2px] bg-gradient-to-t from-purple-500 via-blue-500 to-transparent from-[0%] via-[10%] rounded-full"
+            className="absolute inset-x-0 top-0 w-[2px] bg-gradient-to-t from-purple-500 via-blue-500 to-transparent from-[0%] via-[10%] rounded-full shadow-[0_0_8px_rgba(147,51,234,0.5),0_0_16px_rgba(59,130,246,0.3)]"
           />
         </div>
       </div>

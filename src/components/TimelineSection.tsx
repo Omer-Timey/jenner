@@ -15,25 +15,25 @@ const timelineData = [
           <img
             src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=500&h=500&fit=crop&q=80"
             alt="תחילת המחקר"
-            className="rounded-lg object-cover h-32 md:h-48 w-full shadow-lg"
+            className="rounded-lg object-cover h-32 md:h-48 w-full shadow-lg hover:shadow-[0_0_20px_rgba(147,51,234,0.3)] transition-shadow duration-300"
             loading="lazy"
           />
           <img
             src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=500&h=500&fit=crop&q=80"
             alt="מעבדה"
-            className="rounded-lg object-cover h-32 md:h-48 w-full shadow-lg"
+            className="rounded-lg object-cover h-32 md:h-48 w-full shadow-lg hover:shadow-[0_0_20px_rgba(147,51,234,0.3)] transition-shadow duration-300"
             loading="lazy"
           />
           <img
             src="https://images.unsplash.com/photo-1579154204601-01588f351e67?w=500&h=500&fit=crop&q=80"
             alt="מחקר"
-            className="rounded-lg object-cover h-32 md:h-48 w-full shadow-lg"
+            className="rounded-lg object-cover h-32 md:h-48 w-full shadow-lg hover:shadow-[0_0_20px_rgba(147,51,234,0.3)] transition-shadow duration-300"
             loading="lazy"
           />
           <img
             src="https://images.unsplash.com/photo-1576086213369-97a306d36557?w=500&h=500&fit=crop&q=80"
             alt="גילויים ראשונים"
-            className="rounded-lg object-cover h-32 md:h-48 w-full shadow-lg"
+            className="rounded-lg object-cover h-32 md:h-48 w-full shadow-lg hover:shadow-[0_0_20px_rgba(147,51,234,0.3)] transition-shadow duration-300"
             loading="lazy"
           />
         </div>
@@ -51,19 +51,19 @@ const timelineData = [
           <img
             src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=500&h=500&fit=crop&q=80"
             alt="פריצת דרך מדעית"
-            className="rounded-lg object-cover h-32 md:h-48 w-full shadow-lg"
+            className="rounded-lg object-cover h-32 md:h-48 w-full shadow-lg hover:shadow-[0_0_20px_rgba(147,51,234,0.3)] transition-shadow duration-300"
             loading="lazy"
           />
           <img
             src="https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=500&h=500&fit=crop&q=80"
             alt="מחקר מתקדם"
-            className="rounded-lg object-cover h-32 md:h-48 w-full shadow-lg"
+            className="rounded-lg object-cover h-32 md:h-48 w-full shadow-lg hover:shadow-[0_0_20px_rgba(147,51,234,0.3)] transition-shadow duration-300"
             loading="lazy"
           />
           <img
             src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?w=500&h=500&fit=crop&q=80"
             alt="תוצאות מחקר"
-            className="rounded-lg object-cover h-32 md:h-48 w-full shadow-lg"
+            className="rounded-lg object-cover h-32 md:h-48 w-full shadow-lg hover:shadow-[0_0_20px_rgba(147,51,234,0.3)] transition-shadow duration-300"
             loading="lazy"
           />
         </div>
@@ -81,25 +81,25 @@ const timelineData = [
           <img
             src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=500&h=500&fit=crop&q=80"
             alt="קהילה"
-            className="rounded-lg object-cover h-32 md:h-48 w-full shadow-lg"
+            className="rounded-lg object-cover h-32 md:h-48 w-full shadow-lg hover:shadow-[0_0_20px_rgba(147,51,234,0.3)] transition-shadow duration-300"
             loading="lazy"
           />
           <img
             src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=500&h=500&fit=crop&q=80"
             alt="מפגש קהילתי"
-            className="rounded-lg object-cover h-32 md:h-48 w-full shadow-lg"
+            className="rounded-lg object-cover h-32 md:h-48 w-full shadow-lg hover:shadow-[0_0_20px_rgba(147,51,234,0.3)] transition-shadow duration-300"
             loading="lazy"
           />
           <img
             src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?w=500&h=500&fit=crop&q=80"
             alt="תמיכה הדדית"
-            className="rounded-lg object-cover h-32 md:h-48 w-full shadow-lg"
+            className="rounded-lg object-cover h-32 md:h-48 w-full shadow-lg hover:shadow-[0_0_20px_rgba(147,51,234,0.3)] transition-shadow duration-300"
             loading="lazy"
           />
           <img
             src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=500&h=500&fit=crop&q=80"
             alt="צמיחה"
-            className="rounded-lg object-cover h-32 md:h-48 w-full shadow-lg"
+            className="rounded-lg object-cover h-32 md:h-48 w-full shadow-lg hover:shadow-[0_0_20px_rgba(147,51,234,0.3)] transition-shadow duration-300"
             loading="lazy"
           />
         </div>
@@ -117,19 +117,19 @@ const timelineData = [
           <img
             src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&h=500&fit=crop&q=80"
             alt="הקמת העמותה"
-            className="rounded-lg object-cover h-32 md:h-48 w-full shadow-lg"
+            className="rounded-lg object-cover h-32 md:h-48 w-full shadow-lg hover:shadow-[0_0_20px_rgba(147,51,234,0.3)] transition-shadow duration-300"
             loading="lazy"
           />
           <img
             src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=500&h=500&fit=crop&q=80"
             alt="מחקר נגיש"
-            className="rounded-lg object-cover h-32 md:h-48 w-full shadow-lg"
+            className="rounded-lg object-cover h-32 md:h-48 w-full shadow-lg hover:shadow-[0_0_20px_rgba(147,51,234,0.3)] transition-shadow duration-300"
             loading="lazy"
           />
           <img
             src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=500&h=500&fit=crop&q=80"
             alt="כלים מעשיים"
-            className="rounded-lg object-cover h-32 md:h-48 w-full shadow-lg"
+            className="rounded-lg object-cover h-32 md:h-48 w-full shadow-lg hover:shadow-[0_0_20px_rgba(147,51,234,0.3)] transition-shadow duration-300"
             loading="lazy"
           />
         </div>
