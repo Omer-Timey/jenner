@@ -11,7 +11,7 @@ const ChangingGameSection = () => {
   return <section id="research" className="relative min-h-screen w-full overflow-hidden flex items-start">
       {/* Video Background */}
       <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
-        <source src="/2 section video.mp4" type="video/mp4" />
+        <source src="/2-section-video.mp4" type="video/mp4" />
       </video>
 
       {/* Right-to-left gradient for right-aligned content */}

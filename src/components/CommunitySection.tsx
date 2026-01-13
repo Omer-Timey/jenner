@@ -21,7 +21,7 @@ const CommunitySection = () => {
         playsInline
         className="absolute inset-0 w-full h-full object-cover"
       >
-        <source src="/3 section video.mp4" type="video/mp4" />
+        <source src="/3-section-video.mp4" type="video/mp4" />
       </video>
 
       {/* Gradient Overlay */}
