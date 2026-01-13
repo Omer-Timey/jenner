@@ -28,7 +28,7 @@ const timelineData = [
     ),
   },
   {
-    title: "אפריל 2024",
+    title: "אפר׳ 2024",
     content: (
       <div>
         <h4 className="text-xl md:text-2xl font-bold text-foreground mb-6 text-right">חולה בסרטן</h4>
@@ -50,7 +50,7 @@ const timelineData = [
     ),
   },
   {
-    title: "יולי 2024",
+    title: "יול׳ 2024",
     content: (
       <div>
         <h4 className="text-xl md:text-2xl font-bold text-foreground mb-6 text-right">רץ 60 ק"מ יום אחרי טיפולים</h4>
@@ -72,7 +72,7 @@ const timelineData = [
     ),
   },
   {
-    title: "נובמבר 2024",
+    title: "נוב׳ 2024",
     content: (
       <div>
         <h4 className="text-xl md:text-2xl font-bold text-foreground mb-6 text-right">שיא ישראל לחצי המרתון הכבד ביותר</h4>
@@ -94,7 +94,7 @@ const timelineData = [
     ),
   },
   {
-    title: "דצמבר 2024",
+    title: "דצמ׳ 2024",
     content: (
       <div>
         <h4 className="text-xl md:text-2xl font-bold text-foreground mb-6 text-right">הסרטן התפשט לריאה</h4>
@@ -116,7 +116,7 @@ const timelineData = [
     ),
   },
   {
-    title: "ינואר 2025",
+    title: "ינו׳ 2025",
     content: (
       <div>
         <h4 className="text-xl md:text-2xl font-bold text-foreground mb-6 text-right">טס לאליפות העולם בשחייה במי קרח</h4>
@@ -138,7 +138,7 @@ const timelineData = [
     ),
   },
   {
-    title: "יולי 2025",
+    title: "יול׳ 2025",
     content: (
       <div>
         <h4 className="text-xl md:text-2xl font-bold text-foreground mb-6 text-right">קובע שיא ישראל למרתון הכבד ביותר שבוצע בישראל</h4>
@@ -160,7 +160,7 @@ const timelineData = [
     ),
   },
   {
-    title: "אוגוסט 2025",
+    title: "אוג׳ 2025",
     content: (
       <div>
         <h4 className="text-xl md:text-2xl font-bold text-foreground mb-6 text-right">הסרטן מתפשט שוב פעם</h4>
@@ -182,7 +182,7 @@ const timelineData = [
     ),
   },
   {
-    title: "נובמבר 2025",
+    title: "נוב׳ 2025",
     content: (
       <div>
         <h4 className="text-xl md:text-2xl font-bold text-foreground mb-6 text-right">הקמת ג'נר</h4>
