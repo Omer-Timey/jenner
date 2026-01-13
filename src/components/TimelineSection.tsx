@@ -9,9 +9,7 @@ const timelineData = [
     title: "2018",
     content: (
       <div>
-        <h4 className="text-xl md:text-2xl font-bold text-foreground mb-6 text-right">
-          תחילת המסע
-        </h4>
+        <h4 className="text-xl md:text-2xl font-bold text-foreground mb-6 text-right">תחילת המסע</h4>
         <div className="grid grid-cols-2 gap-4">
           <img
             src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=500&h=500&fit=crop&q=80"
@@ -45,9 +43,7 @@ const timelineData = [
     title: "2020",
     content: (
       <div>
-        <h4 className="text-xl md:text-2xl font-bold text-foreground mb-6 text-right">
-          פריצת הדרך
-        </h4>
+        <h4 className="text-xl md:text-2xl font-bold text-foreground mb-6 text-right">פריצת הדרך</h4>
         <div className="grid grid-cols-2 gap-4">
           <img
             src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=500&h=500&fit=crop&q=80"
@@ -75,9 +71,7 @@ const timelineData = [
     title: "2022",
     content: (
       <div>
-        <h4 className="text-xl md:text-2xl font-bold text-foreground mb-6 text-right">
-          הקמת הקהילה
-        </h4>
+        <h4 className="text-xl md:text-2xl font-bold text-foreground mb-6 text-right">הקמת הקהילה</h4>
         <div className="grid grid-cols-2 gap-4">
           <img
             src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=500&h=500&fit=crop&q=80"
@@ -111,9 +105,7 @@ const timelineData = [
     title: "2024",
     content: (
       <div>
-        <h4 className="text-xl md:text-2xl font-bold text-foreground mb-6 text-right">
-          סערה מטבולית
-        </h4>
+        <h4 className="text-xl md:text-2xl font-bold text-foreground mb-6 text-right">סערה מטבולית</h4>
         <div className="grid grid-cols-2 gap-4">
           <img
             src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&h=500&fit=crop&q=80"
@@ -144,13 +136,10 @@ const TimelineSection = () => {
   const isHeaderInView = useInView(headerRef, { once: true, margin: "-100px" });
 
   return (
-    <section
-      id="about"
-      className="relative w-full py-24 md:py-32 bg-background"
-    >
+    <section id="about" className="relative w-full py-24 md:py-32 bg-background">
       {/* Ethereal Shadow Background */}
       <EtheralShadow
-        className="absolute inset-0 z-0 opacity-20"
+        className="absolute inset-0 z-0 opacity-10"
         color="rgba(128, 128, 128, 0.5)"
         animation={{ scale: 100, speed: 90 }}
         noise={{ opacity: 0.3, scale: 1.2 }}
@@ -167,9 +156,7 @@ const TimelineSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-10"
         >
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground">
-            מי אני?
-          </h2>
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground">מי אני?</h2>
         </motion.div>
 
         {/* Timeline */}
