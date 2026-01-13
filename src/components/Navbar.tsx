@@ -6,9 +6,8 @@ import { cn } from "@/lib/utils";
 
 const menuItems = [
   { name: "מי אנחנו", href: "#about" },
-  { name: "המחקר", href: "#research" },
-  { name: "הקהילה", href: "#community" },
-  { name: "צור קשר", href: "#contact" },
+  { name: "סערה מטבולית", href: "#research" },
+  { name: "פורום וקהילה", href: "#community" },
 ];
 
 const Logo = ({ className }: { className?: string }) => {
