@@ -2,6 +2,13 @@
 
 import React, { useRef, useId, useEffect, CSSProperties } from 'react';
 import { animate, useMotionValue, AnimationPlaybackControls } from 'framer-motion';
+import { cn } from '@/lib/utils';
+
+interface ResponsiveImage {
+    src: string;
+    alt?: string;
+    srcSet?: string;
+}
 
 interface AnimationConfig {
     preview?: boolean;
@@ -14,13 +21,17 @@ interface NoiseConfig {
     scale: number;
 }
 
-interface EtherealShadowProps {
+export interface EtheralShadowProps {
+    type?: 'preset' | 'custom';
+    presetIndex?: number;
+    customImage?: ResponsiveImage;
     sizing?: 'fill' | 'stretch';
     color?: string;
     animation?: AnimationConfig;
     noise?: NoiseConfig;
     style?: CSSProperties;
     className?: string;
+    children?: React.ReactNode;
 }
 
 function mapRange(
@@ -44,14 +55,15 @@ const useInstanceId = (): string => {
     return instanceId;
 };
 
-export function EtherealShadow({
+export function EtheralShadow({
     sizing = 'fill',
     color = 'rgba(128, 128, 128, 1)',
     animation,
     noise,
     style,
-    className
-}: EtherealShadowProps) {
+    className,
+    children
+}: EtheralShadowProps) {
     const id = useInstanceId();
     const animationEnabled = animation && animation.scale > 0;
     const feColorMatrixRef = useRef<SVGFEColorMatrixElement>(null);
@@ -91,64 +103,83 @@ export function EtherealShadow({
 
     return (
         <div
-            className={className}
-            style={{
-                position: 'absolute',
-                inset: 0,
-                overflow: 'hidden',
-                ...style
-            }}
+            className={cn("relative overflow-hidden w-full h-full", className)}
+            style={style}
         >
-            <svg style={{ position: 'absolute', width: 0, height: 0 }}>
-                <defs>
-                    {animationEnabled && (
-                        <filter id={`${id}-displacement`} x="0%" y="0%" width="100%" height="100%">
-                            <feTurbulence
-                                type="fractalNoise"
-                                baseFrequency="0.01 0.01"
-                                numOctaves="3"
-                                seed="1"
-                                result="noise"
-                            />
-                            <feColorMatrix
-                                ref={feColorMatrixRef}
-                                in="noise"
-                                type="hueRotate"
-                                values="0"
-                                result="rotatedNoise"
-                            />
-                            <feDisplacementMap
-                                in="SourceGraphic"
-                                in2="rotatedNoise"
-                                scale={displacementScale}
-                                xChannelSelector="R"
-                                yChannelSelector="G"
-                            />
-                        </filter>
-                    )}
-                </defs>
-            </svg>
-
             <div
                 style={{
-                    position: 'absolute',
-                    inset: 0,
-                    background: `radial-gradient(ellipse at center, ${color} 0%, transparent 70%)`,
-                    filter: animationEnabled ? `url(#${id}-displacement)` : undefined,
-                    transform: 'scale(1.5)',
+                    position: "absolute",
+                    inset: -displacementScale,
+                    filter: animationEnabled ? `url(#${id}) blur(4px)` : "none"
                 }}
-            />
+            >
+                {animationEnabled && (
+                    <svg style={{ position: "absolute" }}>
+                        <defs>
+                            <filter id={id}>
+                                <feTurbulence
+                                    result="undulation"
+                                    numOctaves={2}
+                                    baseFrequency={`${mapRange(animation.scale, 0, 100, 0.001, 0.0005)},${mapRange(animation.scale, 0, 100, 0.004, 0.002)}`}
+                                    seed={0}
+                                    type="turbulence"
+                                />
+                                <feColorMatrix
+                                    ref={feColorMatrixRef}
+                                    in="undulation"
+                                    type="hueRotate"
+                                    values="180"
+                                />
+                                <feColorMatrix
+                                    in="dist"
+                                    result="circulation"
+                                    type="matrix"
+                                    values="4 0 0 0 1  4 0 0 0 1  4 0 0 0 1  1 0 0 0 0"
+                                />
+                                <feDisplacementMap
+                                    in="SourceGraphic"
+                                    in2="circulation"
+                                    scale={displacementScale}
+                                    result="dist"
+                                />
+                                <feDisplacementMap
+                                    in="dist"
+                                    in2="undulation"
+                                    scale={displacementScale}
+                                    result="output"
+                                />
+                            </filter>
+                        </defs>
+                    </svg>
+                )}
+                <div
+                    style={{
+                        backgroundColor: color,
+                        maskImage: `url('https://framerusercontent.com/images/ceBGguIpUU8luwByxuQz79t7To.png')`,
+                        maskSize: sizing === "stretch" ? "100% 100%" : "cover",
+                        maskRepeat: "no-repeat",
+                        maskPosition: "center",
+                        width: "100%",
+                        height: "100%"
+                    }}
+                />
+            </div>
+
+            {children && (
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-10">
+                    {children}
+                </div>
+            )}
 
             {noise && noise.opacity > 0 && (
                 <div
                     style={{
-                        position: 'absolute',
+                        position: "absolute",
                         inset: 0,
-                        opacity: noise.opacity,
-                        backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
-                        backgroundRepeat: 'repeat',
-                        backgroundSize: `${noise.scale * 100}px ${noise.scale * 100}px`,
-                        pointerEvents: 'none',
+                        backgroundImage: `url("https://framerusercontent.com/images/g0QcWrxr87K0ufOxIUFBakwYA8.png")`,
+                        backgroundSize: noise.scale * 200,
+                        backgroundRepeat: "repeat",
+                        opacity: noise.opacity / 2
                     }}
                 />
             )}
