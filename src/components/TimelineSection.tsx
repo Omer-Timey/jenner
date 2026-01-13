@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Timeline } from "@/components/ui/timeline";
-import { AuroraBackground } from "@/components/ui/aurora-background";
+import { EtherealShadow } from "@/components/ui/ethereal-shadow";
 
 const timelineData = [
   {
@@ -148,13 +148,13 @@ const TimelineSection = () => {
       id="about"
       className="relative w-full py-24 md:py-32 bg-background"
     >
-      {/* Aurora Background Layer - Full size, more transparent */}
-      <AuroraBackground 
-        className="absolute inset-0 z-0 opacity-25" 
-        showRadialGradient={true}
-      >
-        <div />
-      </AuroraBackground>
+      {/* Ethereal Shadow Background */}
+      <EtherealShadow
+        className="absolute inset-0 z-0 opacity-40"
+        color="rgba(147, 51, 234, 0.6)"
+        animation={{ scale: 50, speed: 30 }}
+        noise={{ opacity: 0.03, scale: 1 }}
+      />
 
       {/* Content Layer */}
       <div className="relative z-10 container mx-auto px-6">
