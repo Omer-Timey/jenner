@@ -160,7 +160,7 @@ const TimelineSection = () => {
       {/* Content Layer */}
       <div className="relative z-10 container mx-auto px-6">
         {/* Header */}
-        <div ref={headerRef} className="text-center mb-16">
+        <div ref={headerRef} className="text-center mb-6">
           <TextEffect
             preset="blur"
             trigger={isHeaderInView}
