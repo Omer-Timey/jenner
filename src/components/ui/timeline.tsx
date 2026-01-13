@@ -30,21 +30,21 @@ export const Timeline = ({
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
   return <div className="w-full bg-transparent font-sans md:px-10" ref={containerRef}>
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
-        {data.map((item, index) => <div key={index} className="flex justify-start pt-10 md:pt-32 relative md:gap-10">
+        {data.map((item, index) => <div key={index} className="flex justify-start pt-10 md:pt-32 relative">
             {/* Pin - absolutely positioned to center on the line */}
             <div className="absolute right-[13px] md:right-[13px] top-10 md:top-32 h-10 w-10 rounded-full bg-background flex items-center justify-center z-10">
               <div className="h-4 w-4 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,0.5),0_0_20px_rgba(59,130,246,0.3)]" />
             </div>
 
-            {/* Title container - sticky, positioned to the left of pin */}
-            <div className="sticky flex flex-row z-10 items-center top-40 self-start justify-end gap-4 w-auto pr-16 md:pr-24">
-              <h3 className="hidden md:block text-xl md:text-5xl font-bold text-white whitespace-nowrap">
+            {/* Title container - fixed width for consistent gaps */}
+            <div className="sticky flex flex-row z-10 items-start top-40 self-start justify-end w-[200px] md:w-[280px] pr-16 md:pr-24 shrink-0">
+              <h3 className="hidden md:block text-xl md:text-5xl font-bold text-white whitespace-nowrap text-right">
                 {item.title}
               </h3>
             </div>
 
-            {/* Content area */}
-            <div className="relative pl-20 md:pl-4 w-full">
+            {/* Content area - consistent margin from title */}
+            <div className="relative pl-20 md:pl-8 w-full max-w-2xl">
               <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-white whitespace-nowrap">
                 {item.title}
               </h3>
