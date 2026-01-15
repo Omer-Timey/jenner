@@ -248,7 +248,7 @@ function ListItem({
 const aboutLinks: LinkItem[] = [
   {
     title: 'הסיפור שלי',
-    href: '#about',
+    href: '/my-story',
     description: 'הכירו את המסע והחזון',
     icon: Heart,
   },
