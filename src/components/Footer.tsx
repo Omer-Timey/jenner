@@ -20,10 +20,12 @@ const Footer = () => {
       <div className="container mx-auto px-6 py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Logo & Description */}
-          <div className="text-center md:text-right">
-            <h3 className="text-xl font-bold text-foreground mb-2">
-              סערה מטבולית
-            </h3>
+          <div className="text-center md:text-right flex flex-col items-center md:items-end gap-2">
+            <img 
+              src="/logo.png" 
+              alt="סערה מטבולית" 
+              className="h-10 w-auto"
+            />
             <p className="text-muted-foreground text-sm">
               המלחמה המחודשת בסרטן
             </p>
