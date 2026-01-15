@@ -39,9 +39,7 @@ const WhatIsMetabolicStorm = () => {
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6">
               מהי סערה מטבולית?
             </h1>
-            <p className="text-white/70 text-lg md:text-xl">
-              ינואר 2025
-            </p>
+            <p className="text-white/70 text-lg font-light md:text-3xl">16 בינואר 2026</p>
           </div>
         </div>
       </section>
