@@ -30,7 +30,7 @@ export const Timeline = ({
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
   return <div className="w-full bg-transparent font-sans md:px-10" ref={containerRef}>
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
-        {data.map((item, index) => <div key={index} className="flex justify-start pt-10 md:pt-40 relative md:gap-[40px]">
+        {data.map((item, index) => <div key={index} className="flex justify-start pt-10 md:pt-40 relative md:gap-[120px]">
             {/* Pin - absolutely positioned to center on the line */}
             <div className="absolute right-[13px] md:right-[13px] top-10 md:top-40 h-10 w-10 rounded-full bg-background flex items-center justify-center z-10">
               <div className="h-4 w-4 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,0.5),0_0_20px_rgba(59,130,246,0.3)]" />
