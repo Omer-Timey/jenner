@@ -18,9 +18,13 @@ import {
   Flame,
   MessageCircle,
   Heart,
-  Target,
   BookOpen,
   Sparkles,
+  Dna,
+  Library,
+  HelpCircle,
+  Archive,
+  HandHeart,
 } from 'lucide-react';
 
 type LinkItem = {
@@ -70,11 +74,11 @@ export function Header() {
               <NavigationMenuList className="gap-1">
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className="bg-transparent text-foreground hover:bg-muted text-base">
-                    מי אנחנו
+                    פורום וקהילה
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <div className="grid w-[400px] gap-3 p-4 bg-popover" dir="rtl">
-                      {aboutLinks.map((item, i) => (
+                      {communityLinks.map((item, i) => (
                         <NavigationMenuLink key={i} asChild>
                           <ListItem {...item} />
                         </NavigationMenuLink>
@@ -99,14 +103,18 @@ export function Header() {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuLink
-                    href="#community"
-                    className={cn(
-                      "group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-base font-medium text-foreground transition-colors hover:bg-muted hover:text-foreground focus:bg-muted focus:text-foreground focus:outline-none"
-                    )}
-                  >
-                    פורום וקהילה
-                  </NavigationMenuLink>
+                  <NavigationMenuTrigger className="bg-transparent text-foreground hover:bg-muted text-base">
+                    מי אנחנו
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="grid w-[400px] gap-3 p-4 bg-popover" dir="rtl">
+                      {aboutLinks.map((item, i) => (
+                        <NavigationMenuLink key={i} asChild>
+                          <ListItem {...item} />
+                        </NavigationMenuLink>
+                      ))}
+                    </div>
+                  </NavigationMenuContent>
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
@@ -134,8 +142,8 @@ export function Header() {
 
       <MobileMenu open={open}>
         <div className="space-y-6 text-center">
-          <h3 className="text-lg font-semibold text-muted-foreground">מי אנחנו</h3>
-          {aboutLinks.map((link) => (
+          <h3 className="text-lg font-semibold text-muted-foreground">פורום וקהילה</h3>
+          {communityLinks.map((link) => (
             <a
               key={link.title}
               href={link.href}
@@ -158,13 +166,17 @@ export function Header() {
             </a>
           ))}
 
-          <a
-            href="#community"
-            onClick={() => setOpen(false)}
-            className="block text-xl font-medium text-foreground hover:text-primary transition-colors pt-4"
-          >
-            פורום וקהילה
-          </a>
+          <h3 className="text-lg font-semibold text-muted-foreground pt-4">מי אנחנו</h3>
+          {aboutLinks.map((link) => (
+            <a
+              key={link.title}
+              href={link.href}
+              onClick={() => setOpen(false)}
+              className="block text-xl font-medium text-foreground hover:text-primary transition-colors"
+            >
+              {link.title}
+            </a>
+          ))}
         </div>
 
         <div className="mt-12 flex flex-col gap-4 px-6">
@@ -241,37 +253,58 @@ const aboutLinks: LinkItem[] = [
     icon: Heart,
   },
   {
-    title: 'הגישה שלנו',
+    title: 'על הצוות',
     href: '#about',
-    description: 'שיטת העבודה הייחודית',
-    icon: Target,
-  },
-  {
-    title: 'תוצאות',
-    href: '#about',
-    description: 'סיפורי הצלחה של לקוחות',
-    icon: Sparkles,
+    description: 'הכירו את האנשים מאחורי הפרויקט',
+    icon: Users,
   },
 ];
 
 const researchLinks: LinkItem[] = [
   {
-    title: 'מחקר ומדע',
+    title: 'מהי סערה מטבולית',
     href: '#research',
-    description: 'הבסיס המדעי לשיטה',
-    icon: BookOpen,
-  },
-  {
-    title: 'התוכנית',
-    href: '#research',
-    description: 'פרטים על התהליך',
+    description: 'הבנת הגישה המטבולית',
     icon: Flame,
   },
   {
-    title: 'שאלות נפוצות',
+    title: 'הביולוגיה של הסרטן',
     href: '#research',
-    description: 'תשובות לשאלות שלכם',
+    description: 'המדע מאחורי המחלה',
+    icon: Dna,
+  },
+  {
+    title: 'הספרות מאחורינו',
+    href: '#research',
+    description: 'מחקרים ופרסומים מדעיים',
+    icon: Library,
+  },
+  {
+    title: 'תכל״ס מה עכשיו?',
+    href: '#research',
+    description: 'צעדים מעשיים להתחלה',
+    icon: HelpCircle,
+  },
+  {
+    title: 'ארכיון',
+    href: '#research',
+    description: 'תכנים ומשאבים נוספים',
+    icon: Archive,
+  },
+];
+
+const communityLinks: LinkItem[] = [
+  {
+    title: 'שיח פתוח',
+    href: '#community',
+    description: 'הצטרפו לדיון הקהילתי',
     icon: MessageCircle,
+  },
+  {
+    title: 'תרומות',
+    href: '#community',
+    description: 'תמכו בפעילות שלנו',
+    icon: HandHeart,
   },
 ];
 
