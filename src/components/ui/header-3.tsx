@@ -51,7 +51,7 @@ export function Header() {
         className={cn(
           "fixed z-50 w-full transition-all duration-300",
           !isVisible && !open && "-translate-y-full",
-          scrolled && "bg-background/90 border-b border-border backdrop-blur-lg"
+          scrolled && "bg-background/70 border-b border-border backdrop-blur-lg"
         )}
       >
         <div className="w-full px-6 lg:px-12">
@@ -67,7 +67,7 @@ export function Header() {
             <NavigationMenu className="hidden lg:flex absolute left-1/2 -translate-x-1/2">
               <NavigationMenuList className="gap-1">
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="bg-transparent text-foreground hover:bg-muted">
+                  <NavigationMenuTrigger className="bg-transparent text-foreground hover:bg-muted text-base">
                     מי אנחנו
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
@@ -82,7 +82,7 @@ export function Header() {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="bg-transparent text-foreground hover:bg-muted">
+                  <NavigationMenuTrigger className="bg-transparent text-foreground hover:bg-muted text-base">
                     סערה מטבולית
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
@@ -100,7 +100,7 @@ export function Header() {
                   <NavigationMenuLink
                     href="#community"
                     className={cn(
-                      "group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted hover:text-foreground focus:bg-muted focus:text-foreground focus:outline-none"
+                      "group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-base font-medium text-foreground transition-colors hover:bg-muted hover:text-foreground focus:bg-muted focus:text-foreground focus:outline-none"
                     )}
                   >
                     פורום וקהילה
