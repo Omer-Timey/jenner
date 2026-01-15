@@ -56,10 +56,17 @@ const WhatIsMetabolicStorm = () => {
       {/* Article Content */}
       <section className="bg-background py-20 md:py-32">
         <article className="max-w-4xl mx-auto px-6 md:px-8">
-          <div className="text-foreground/85 text-2xl md:text-3xl lg:text-4xl leading-relaxed space-y-8 [&_strong]:text-foreground [&_strong]:font-semibold [&_p]:first:hidden">
+          <div className="text-foreground/85 text-2xl md:text-3xl lg:text-4xl leading-relaxed">
             <ReactMarkdown
               components={{
-                p: ({ children }) => <p className="mb-8">{children}</p>,
+                p: ({ children }) => {
+                  // Skip the first paragraph which is just the title
+                  const text = String(children);
+                  if (text.includes('מהי סערה מטבולית?') && text.length < 30) {
+                    return null;
+                  }
+                  return <p className="mb-10">{children}</p>;
+                },
                 strong: ({ children }) => <strong className="text-foreground font-semibold">{children}</strong>,
               }}
             >
