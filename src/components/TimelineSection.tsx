@@ -70,10 +70,10 @@ const timelineData = [
       <div>
         <h4 className="text-2xl md:text-4xl font-normal text-foreground mb-6 text-right">הסרטן התפשט לריאה</h4>
         <div className={imageGridClass}>
-          <img src="/timeline-media/december-2024/1.jpeg" alt="הסרטן התפשט" className={imageClass} loading="lazy" />
-          <img src="/timeline-media/december-2024/2.jpeg" alt="הסרטן התפשט" className={imageClass} loading="lazy" />
-          <img src="/timeline-media/december-2024/3.jpeg" alt="הסרטן התפשט" className={imageClass} loading="lazy" />
-          <img src="/timeline-media/december-2024/4.jpeg" alt="הסרטן התפשט" className={imageClass} loading="lazy" />
+          <img src="/timeline-media/december-2024/1.HEIC" alt="הסרטן התפשט" className={imageClass} loading="lazy" />
+          <img src="/timeline-media/december-2024/2.HEIC" alt="הסרטן התפשט" className={imageClass} loading="lazy" />
+          <img src="/timeline-media/december-2024/3.HEIC" alt="הסרטן התפשט" className={imageClass} loading="lazy" />
+          <img src="/timeline-media/december-2024/4.HEIC" alt="הסרטן התפשט" className={imageClass} loading="lazy" />
         </div>
       </div>
     ),
@@ -87,7 +87,7 @@ const timelineData = [
           <img src="/timeline-media/january-2025/1.PNG" alt="אליפות עולם" className={imageClass} loading="lazy" />
           <img src="/timeline-media/january-2025/2.jpg" alt="אליפות עולם" className={imageClass} loading="lazy" />
           <img src="/timeline-media/january-2025/3.PNG" alt="אליפות עולם" className={imageClass} loading="lazy" />
-          <img src="/timeline-media/january-2025/4.jpeg" alt="אליפות עולם" className={imageClass} loading="lazy" />
+          <img src="/timeline-media/january-2025/4.HEIC" alt="אליפות עולם" className={imageClass} loading="lazy" />
         </div>
       </div>
     ),
@@ -112,7 +112,7 @@ const timelineData = [
       <div>
         <h4 className="text-2xl md:text-4xl font-normal text-foreground mb-6 text-right">הסרטן מתפשט שוב פעם</h4>
         <div className={imageGridClass}>
-          <img src="/timeline-media/august-2025/1.jpeg" alt="הסרטן מתפשט" className={imageClass} loading="lazy" />
+          <img src="/timeline-media/august-2025/1.heic" alt="הסרטן מתפשט" className={imageClass} loading="lazy" />
         </div>
       </div>
     ),
