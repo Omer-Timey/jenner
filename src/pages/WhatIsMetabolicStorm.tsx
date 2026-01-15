@@ -70,12 +70,12 @@ const WhatIsMetabolicStorm = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
         
         {/* Title at the bottom of the image */}
-        <div className="absolute bottom-0 left-0 right-0 p-8 md:p-16 lg:p-24">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+        <div className="absolute bottom-0 left-0 right-0 px-4 md:px-8 pb-16 md:pb-24 lg:pb-32">
+          <div className="max-w-5xl mx-auto">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6">
               מהי סערה מטבולית?
             </h1>
-            <p className="text-white/70 text-sm md:text-base">
+            <p className="text-white/70 text-lg md:text-xl">
               ינואר 2025
             </p>
           </div>
