@@ -3,24 +3,15 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Users, Mail } from "lucide-react";
 import { TextEffect } from "@/components/ui/text-effect";
-
 const CommunitySection = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-
-  return (
-    <section
-      id="community"
-      className="relative min-h-screen w-full overflow-hidden flex items-center"
-    >
+  const isInView = useInView(ref, {
+    once: true,
+    margin: "-100px"
+  });
+  return <section id="community" className="relative min-h-screen w-full overflow-hidden flex items-center">
       {/* Video Background */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover"
-      >
+      <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
         <source src="/3-section-video.mp4" type="video/mp4" />
       </video>
 
@@ -31,72 +22,38 @@ const CommunitySection = () => {
       {/* Content */}
       <div ref={ref} className="relative z-10 container mx-auto px-6 py-24">
         <div className="max-w-4xl mx-auto text-center">
-          <TextEffect
-            preset="blur"
-            trigger={isInView}
-            as="h2"
-            className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-8"
-          >
+          <TextEffect preset="blur" trigger={isInView} as="h2" className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-8">
             הצטרפו לקהילה
           </TextEffect>
 
-          <TextEffect
-            per="line"
-            preset="blur"
-            trigger={isInView}
-            delay={0.3}
-            as="p"
-            className="text-lg md:text-xl text-white/90 leading-relaxed mb-12 max-w-3xl mx-auto"
-          >
+          <TextEffect per="line" preset="blur" trigger={isInView} delay={0.3} as="p" className="text-lg md:text-xl text-white/90 leading-relaxed mb-12 max-w-3xl mx-auto">
             זה המקום שבו ידע הופך לכוח. הצטרפו לשיח פתוח על מחקרים פורצי דרך, שתפו תובנות וקבלו כלים מעשיים. בקהילה שלנו, המדע והאנושיות נפגשים כדי ליצור חזית מאוחדת, חוקרת ותומכת.
           </TextEffect>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-          >
-            <a
-              href="#"
-              className="glass-button-primary inline-flex items-center justify-center gap-3"
-            >
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} animate={isInView ? {
+          opacity: 1,
+          y: 0
+        } : {}} transition={{
+          duration: 0.8,
+          delay: 0.4
+        }} className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#" className="glass-button-primary inline-flex items-center justify-center gap-3">
               <Users className="w-5 h-5" />
               הצטרפו לפורום
             </a>
-            <a
-              href="#contact"
-              className="glass-button inline-flex items-center justify-center gap-3"
-            >
+            <a href="#contact" className="glass-button inline-flex items-center justify-center gap-3">
               <Mail className="w-5 h-5" />
               צרו קשר
             </a>
           </motion.div>
 
           {/* Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="grid grid-cols-2 md:grid-cols-3 gap-8 mt-20"
-          >
-            {[
-              { number: "5,000+", label: "חברי קהילה" },
-              { number: "200+", label: "מאמרים" },
-              { number: "50+", label: "מחקרים" },
-            ].map((stat, index) => (
-              <div key={index} className="glass rounded-2xl p-6">
-                <div className="text-3xl md:text-4xl font-bold text-foreground mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-muted-foreground">{stat.label}</div>
-              </div>
-            ))}
-          </motion.div>
+          
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default CommunitySection;
