@@ -1,7 +1,6 @@
 import { Header } from '@/components/ui/header-3';
 import Footer from '@/components/Footer';
 import ReactMarkdown from 'react-markdown';
-
 const articleContent = `### **מי אני — יואב שריקר**
 
 היי! אז אני יואב שריקר, אני בן 21. הסיפור שלי עם המחלה לא התחיל בעולם המחקר או האקדמיה — הוא התחיל בצבא.
@@ -19,19 +18,13 @@ const articleContent = `### **מי אני — יואב שריקר**
 
 אני לא רופא ולא גורו.
 אני אדם שעבר דרך, שמחפש תשובות — ויחד עם צוות של אנשים מטורפים, בוחר לברוא מציאות חדשה.`;
-
 const MyStory = () => {
-  return (
-    <div className="min-h-screen bg-background" dir="rtl">
+  return <div className="min-h-screen bg-background" dir="rtl">
       <Header />
       
       {/* Hero Section with Full Screen Image */}
       <section className="relative h-screen w-full">
-        <img 
-          src="/who-am-i/main-image.jpg" 
-          alt="הסיפור שלי" 
-          className="absolute inset-0 w-full h-full object-cover" 
-        />
+        <img src="/who-am-i/main-image.jpg" alt="הסיפור שלי" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
         
         {/* Title at the bottom of the image */}
@@ -40,9 +33,7 @@ const MyStory = () => {
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6">
               הסיפור שלי
             </h1>
-            <p className="text-white/70 text-lg md:text-xl">
-              יואב שריקר
-            </p>
+            <p className="text-white/70 text-lg md:text-xl">16 בינואר 2026</p>
           </div>
         </div>
       </section>
@@ -51,22 +42,23 @@ const MyStory = () => {
       <section className="bg-background py-20 md:py-32">
         <article className="max-w-4xl mx-auto px-6 md:px-8">
           <div className="text-foreground/85 text-2xl md:text-3xl lg:text-4xl leading-relaxed">
-            <ReactMarkdown
-              components={{
-                p: ({ children }) => {
-                  const text = String(children);
-                  // Skip the h3 title since we have our own hero title
-                  if (text.includes('מי אני — יואב שריקר') && text.length < 40) {
-                    return null;
-                  }
-                  return <p className="mb-10 text-3xl">{children}</p>;
-                },
-                h3: () => null, // Skip h3 headings
-                strong: ({ children }) => (
-                  <strong className="text-foreground font-semibold">{children}</strong>
-                )
-              }}
-            >
+            <ReactMarkdown components={{
+            p: ({
+              children
+            }) => {
+              const text = String(children);
+              // Skip the h3 title since we have our own hero title
+              if (text.includes('מי אני — יואב שריקר') && text.length < 40) {
+                return null;
+              }
+              return <p className="mb-10 text-3xl">{children}</p>;
+            },
+            h3: () => null,
+            // Skip h3 headings
+            strong: ({
+              children
+            }) => <strong className="text-foreground font-semibold">{children}</strong>
+          }}>
               {articleContent}
             </ReactMarkdown>
           </div>
@@ -74,8 +66,6 @@ const MyStory = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default MyStory;
