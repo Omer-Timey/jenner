@@ -49,77 +49,74 @@ export function Header() {
     <header>
       <nav
         className={cn(
-          "fixed z-50 w-full px-2 transition-all duration-300",
-          !isVisible && !open && "-translate-y-full"
+          "fixed z-50 w-full transition-all duration-300",
+          !isVisible && !open && "-translate-y-full",
+          scrolled && "bg-background/90 border-b border-border backdrop-blur-lg"
         )}
       >
-        <div
-          className={cn(
-            "mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-12",
-            (scrolled || open) &&
-              "bg-background/90 max-w-4xl rounded-2xl border border-border backdrop-blur-lg lg:px-5 lg:rounded-full"
-          )}
-        >
-          <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
-            <div className="flex w-full items-center justify-between lg:w-auto">
-              <a href="/" aria-label="home" className="flex items-center gap-2">
-                <span className="text-xl font-bold text-foreground tracking-tight">
-                  סערה מטבולית
-                </span>
-              </a>
+        <div className="w-full px-6 lg:px-12">
+          <div className="relative flex items-center justify-between py-3 lg:py-4">
+            {/* Logo - Left side */}
+            <a href="/" aria-label="home" className="flex items-center gap-2">
+              <span className="text-xl font-bold text-foreground tracking-tight">
+                סערה מטבולית
+              </span>
+            </a>
 
-              <NavigationMenu className="hidden lg:block">
-                <NavigationMenuList>
-                  <NavigationMenuItem>
-                    <NavigationMenuTrigger className="bg-transparent text-foreground hover:bg-muted">
-                      מי אנחנו
-                    </NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                      <div className="grid w-[400px] gap-3 p-4 bg-popover">
-                        {aboutLinks.map((item, i) => (
-                          <NavigationMenuLink key={i} asChild>
-                            <ListItem {...item} />
-                          </NavigationMenuLink>
-                        ))}
-                      </div>
-                    </NavigationMenuContent>
-                  </NavigationMenuItem>
+            {/* Navigation - Center */}
+            <NavigationMenu className="hidden lg:flex absolute left-1/2 -translate-x-1/2">
+              <NavigationMenuList className="gap-1">
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="bg-transparent text-foreground hover:bg-muted">
+                    מי אנחנו
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="grid w-[400px] gap-3 p-4 bg-popover" dir="rtl">
+                      {aboutLinks.map((item, i) => (
+                        <NavigationMenuLink key={i} asChild>
+                          <ListItem {...item} />
+                        </NavigationMenuLink>
+                      ))}
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
 
-                  <NavigationMenuItem>
-                    <NavigationMenuTrigger className="bg-transparent text-foreground hover:bg-muted">
-                      סערה מטבולית
-                    </NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                      <div className="grid w-[400px] gap-3 p-4 bg-popover">
-                        {researchLinks.map((item, i) => (
-                          <NavigationMenuLink key={i} asChild>
-                            <ListItem {...item} />
-                          </NavigationMenuLink>
-                        ))}
-                      </div>
-                    </NavigationMenuContent>
-                  </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="bg-transparent text-foreground hover:bg-muted">
+                    סערה מטבולית
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="grid w-[400px] gap-3 p-4 bg-popover" dir="rtl">
+                      {researchLinks.map((item, i) => (
+                        <NavigationMenuLink key={i} asChild>
+                          <ListItem {...item} />
+                        </NavigationMenuLink>
+                      ))}
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
 
-                  <NavigationMenuItem>
-                    <NavigationMenuLink
-                      href="#community"
-                      className={cn(
-                        "group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted hover:text-foreground focus:bg-muted focus:text-foreground focus:outline-none"
-                      )}
-                    >
-                      פורום וקהילה
-                    </NavigationMenuLink>
-                  </NavigationMenuItem>
-                </NavigationMenuList>
-              </NavigationMenu>
-            </div>
+                <NavigationMenuItem>
+                  <NavigationMenuLink
+                    href="#community"
+                    className={cn(
+                      "group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted hover:text-foreground focus:bg-muted focus:text-foreground focus:outline-none"
+                    )}
+                  >
+                    פורום וקהילה
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
 
+            {/* CTA Button - Right side */}
             <div className="hidden lg:flex lg:items-center lg:gap-3">
               <Button asChild className="rounded-full">
                 <a href="#community">הצטרפו אלינו</a>
               </Button>
             </div>
 
+            {/* Mobile menu toggle */}
             <button
               onClick={() => setOpen(!open)}
               className="lg:hidden relative z-50"
@@ -218,15 +215,16 @@ function ListItem({
         "flex items-center gap-3 rounded-lg p-3 transition-colors hover:bg-muted",
         className
       )}
+      dir="rtl"
       {...props}
     >
       <div className="flex size-10 shrink-0 items-center justify-center rounded-md border bg-background">
         <Icon className="size-5 text-foreground" />
       </div>
-      <div className="text-right">
-        <div className="text-sm font-medium text-foreground">{title}</div>
+      <div className="flex-1">
+        <div className="text-sm font-medium text-foreground text-right">{title}</div>
         {description && (
-          <p className="text-sm text-muted-foreground">{description}</p>
+          <p className="text-sm text-muted-foreground text-right">{description}</p>
         )}
       </div>
     </a>
