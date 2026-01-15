@@ -4,25 +4,20 @@ import { Timeline } from "@/components/ui/timeline";
 import { EtheralShadow } from "@/components/ui/ethereal-shadow";
 import { TextEffect } from "@/components/ui/text-effect";
 
+const imageGridClass = "grid grid-cols-2 gap-3 max-w-2xl";
+const imageClass = "rounded-lg object-cover aspect-square w-full shadow-lg hover:shadow-[0_0_20px_rgba(16,185,129,0.3)] transition-shadow duration-300";
+
 const timelineData = [
   {
     title: "סוף 2023",
     content: (
       <div>
         <h4 className="text-2xl md:text-4xl font-normal text-foreground mb-6 text-right">לחימה בעזה</h4>
-        <div className="grid grid-cols-2 gap-4 max-w-2xl">
-          <img
-            src="https://images.unsplash.com/photo-1580130732478-4e339fb6836f?w=500&h=500&fit=crop&q=80"
-            alt="לחימה בעזה"
-            className="rounded-lg object-cover aspect-square w-full shadow-lg hover:shadow-[0_0_20px_rgba(16,185,129,0.3)] transition-shadow duration-300"
-            loading="lazy"
-          />
-          <img
-            src="https://images.unsplash.com/photo-1579912437766-7896df6d3cd3?w=500&h=500&fit=crop&q=80"
-            alt="לחימה"
-            className="rounded-lg object-cover aspect-square w-full shadow-lg hover:shadow-[0_0_20px_rgba(16,185,129,0.3)] transition-shadow duration-300"
-            loading="lazy"
-          />
+        <div className={imageGridClass}>
+          <img src="/timeline media/end of 2023/1.JPG" alt="לחימה בעזה" className={imageClass} loading="lazy" />
+          <img src="/timeline media/end of 2023/2.JPG" alt="לחימה בעזה" className={imageClass} loading="lazy" />
+          <img src="/timeline media/end of 2023/3.JPG" alt="לחימה בעזה" className={imageClass} loading="lazy" />
+          <img src="/timeline media/end of 2023/4.JPG" alt="לחימה בעזה" className={imageClass} loading="lazy" />
         </div>
       </div>
     ),
@@ -32,19 +27,11 @@ const timelineData = [
     content: (
       <div>
         <h4 className="text-2xl md:text-4xl font-normal text-foreground mb-6 text-right">חולה בסרטן</h4>
-        <div className="grid grid-cols-2 gap-4 max-w-2xl">
-          <img
-            src="https://images.unsplash.com/photo-1579154204601-01588f351e67?w=500&h=500&fit=crop&q=80"
-            alt="אבחון"
-            className="rounded-lg object-cover aspect-square w-full shadow-lg hover:shadow-[0_0_20px_rgba(16,185,129,0.3)] transition-shadow duration-300"
-            loading="lazy"
-          />
-          <img
-            src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&h=500&fit=crop&q=80"
-            alt="טיפול"
-            className="rounded-lg object-cover aspect-square w-full shadow-lg hover:shadow-[0_0_20px_rgba(16,185,129,0.3)] transition-shadow duration-300"
-            loading="lazy"
-          />
+        <div className={imageGridClass}>
+          <img src="/timeline media/april 2024/1.JPG" alt="חולה בסרטן" className={imageClass} loading="lazy" />
+          <img src="/timeline media/april 2024/2.JPG" alt="חולה בסרטן" className={imageClass} loading="lazy" />
+          <img src="/timeline media/april 2024/3.jpg" alt="חולה בסרטן" className={imageClass} loading="lazy" />
+          <img src="/timeline media/april 2024/4.jpg" alt="חולה בסרטן" className={imageClass} loading="lazy" />
         </div>
       </div>
     ),
@@ -54,19 +41,11 @@ const timelineData = [
     content: (
       <div>
         <h4 className="text-2xl md:text-4xl font-normal text-foreground mb-6 text-right">רץ 60 ק"מ יום אחרי טיפולים</h4>
-        <div className="grid grid-cols-2 gap-4 max-w-2xl">
-          <img
-            src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=500&h=500&fit=crop&q=80"
-            alt="ריצה"
-            className="rounded-lg object-cover aspect-square w-full shadow-lg hover:shadow-[0_0_20px_rgba(16,185,129,0.3)] transition-shadow duration-300"
-            loading="lazy"
-          />
-          <img
-            src="https://images.unsplash.com/photo-1571008887538-b36bb32f4571?w=500&h=500&fit=crop&q=80"
-            alt="אתגר"
-            className="rounded-lg object-cover aspect-square w-full shadow-lg hover:shadow-[0_0_20px_rgba(16,185,129,0.3)] transition-shadow duration-300"
-            loading="lazy"
-          />
+        <div className={imageGridClass}>
+          <img src="/timeline media/july 2024/1.jpg" alt="ריצה 60 קמ" className={imageClass} loading="lazy" />
+          <img src="/timeline media/july 2024/2.JPEG" alt="ריצה 60 קמ" className={imageClass} loading="lazy" />
+          <img src="/timeline media/july 2024/3.JPEG" alt="ריצה 60 קמ" className={imageClass} loading="lazy" />
+          <img src="/timeline media/july 2024/4.JPEG" alt="ריצה 60 קמ" className={imageClass} loading="lazy" />
         </div>
       </div>
     ),
@@ -76,19 +55,11 @@ const timelineData = [
     content: (
       <div>
         <h4 className="text-2xl md:text-4xl font-normal text-foreground mb-6 text-right">שיא ישראל לחצי המרתון הכבד ביותר</h4>
-        <div className="grid grid-cols-2 gap-4 max-w-2xl">
-          <img
-            src="https://images.unsplash.com/photo-1594882645126-14020914d58d?w=500&h=500&fit=crop&q=80"
-            alt="מרתון"
-            className="rounded-lg object-cover aspect-square w-full shadow-lg hover:shadow-[0_0_20px_rgba(16,185,129,0.3)] transition-shadow duration-300"
-            loading="lazy"
-          />
-          <img
-            src="https://images.unsplash.com/photo-1461896836934-voices-from-the-globe?w=500&h=500&fit=crop&q=80"
-            alt="שיא"
-            className="rounded-lg object-cover aspect-square w-full shadow-lg hover:shadow-[0_0_20px_rgba(16,185,129,0.3)] transition-shadow duration-300"
-            loading="lazy"
-          />
+        <div className={imageGridClass}>
+          <img src="/timeline media/november 2024/1.JPG" alt="שיא ישראל" className={imageClass} loading="lazy" />
+          <img src="/timeline media/november 2024/2.JPEG" alt="שיא ישראל" className={imageClass} loading="lazy" />
+          <img src="/timeline media/november 2024/3.JPEG" alt="שיא ישראל" className={imageClass} loading="lazy" />
+          <img src="/timeline media/november 2024/4.JPEG" alt="שיא ישראל" className={imageClass} loading="lazy" />
         </div>
       </div>
     ),
@@ -98,19 +69,11 @@ const timelineData = [
     content: (
       <div>
         <h4 className="text-2xl md:text-4xl font-normal text-foreground mb-6 text-right">הסרטן התפשט לריאה</h4>
-        <div className="grid grid-cols-2 gap-4 max-w-2xl">
-          <img
-            src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=500&h=500&fit=crop&q=80"
-            alt="התמודדות"
-            className="rounded-lg object-cover aspect-square w-full shadow-lg hover:shadow-[0_0_20px_rgba(16,185,129,0.3)] transition-shadow duration-300"
-            loading="lazy"
-          />
-          <img
-            src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=500&h=500&fit=crop&q=80"
-            alt="אתגר חדש"
-            className="rounded-lg object-cover aspect-square w-full shadow-lg hover:shadow-[0_0_20px_rgba(16,185,129,0.3)] transition-shadow duration-300"
-            loading="lazy"
-          />
+        <div className={imageGridClass}>
+          <img src="/timeline media/december 2024/1.jpeg" alt="הסרטן התפשט" className={imageClass} loading="lazy" />
+          <img src="/timeline media/december 2024/2.jpeg" alt="הסרטן התפשט" className={imageClass} loading="lazy" />
+          <img src="/timeline media/december 2024/3.jpeg" alt="הסרטן התפשט" className={imageClass} loading="lazy" />
+          <img src="/timeline media/december 2024/4.jpeg" alt="הסרטן התפשט" className={imageClass} loading="lazy" />
         </div>
       </div>
     ),
@@ -120,19 +83,11 @@ const timelineData = [
     content: (
       <div>
         <h4 className="text-2xl md:text-4xl font-normal text-foreground mb-6 text-right">טס לאליפות העולם בשחייה במי קרח</h4>
-        <div className="grid grid-cols-2 gap-4 max-w-2xl">
-          <img
-            src="https://images.unsplash.com/photo-1530549387789-4c1017266635?w=500&h=500&fit=crop&q=80"
-            alt="שחייה במי קרח"
-            className="rounded-lg object-cover aspect-square w-full shadow-lg hover:shadow-[0_0_20px_rgba(16,185,129,0.3)] transition-shadow duration-300"
-            loading="lazy"
-          />
-          <img
-            src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=500&h=500&fit=crop&q=80"
-            alt="אליפות עולם"
-            className="rounded-lg object-cover aspect-square w-full shadow-lg hover:shadow-[0_0_20px_rgba(16,185,129,0.3)] transition-shadow duration-300"
-            loading="lazy"
-          />
+        <div className={imageGridClass}>
+          <img src="/timeline media/january 2025/1.PNG" alt="אליפות עולם" className={imageClass} loading="lazy" />
+          <img src="/timeline media/january 2025/2.jpg" alt="אליפות עולם" className={imageClass} loading="lazy" />
+          <img src="/timeline media/january 2025/3.PNG" alt="אליפות עולם" className={imageClass} loading="lazy" />
+          <img src="/timeline media/january 2025/4.jpeg" alt="אליפות עולם" className={imageClass} loading="lazy" />
         </div>
       </div>
     ),
@@ -142,19 +97,11 @@ const timelineData = [
     content: (
       <div>
         <h4 className="text-2xl md:text-4xl font-normal text-foreground mb-6 text-right">קובע שיא ישראל למרתון הכבד ביותר שבוצע בישראל</h4>
-        <div className="grid grid-cols-2 gap-4 max-w-2xl">
-          <img
-            src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=500&h=500&fit=crop&q=80"
-            alt="מרתון כבד"
-            className="rounded-lg object-cover aspect-square w-full shadow-lg hover:shadow-[0_0_20px_rgba(16,185,129,0.3)] transition-shadow duration-300"
-            loading="lazy"
-          />
-          <img
-            src="https://images.unsplash.com/photo-1452626038306-9aae5e071dd3?w=500&h=500&fit=crop&q=80"
-            alt="שיא ישראל"
-            className="rounded-lg object-cover aspect-square w-full shadow-lg hover:shadow-[0_0_20px_rgba(16,185,129,0.3)] transition-shadow duration-300"
-            loading="lazy"
-          />
+        <div className={imageGridClass}>
+          <img src="/timeline media/july 2025/1.JPG" alt="שיא ישראל מרתון" className={imageClass} loading="lazy" />
+          <img src="/timeline media/july 2025/2.jpg" alt="שיא ישראל מרתון" className={imageClass} loading="lazy" />
+          <img src="/timeline media/july 2025/3.jpg" alt="שיא ישראל מרתון" className={imageClass} loading="lazy" />
+          <img src="/timeline media/july 2025/4.jpg" alt="שיא ישראל מרתון" className={imageClass} loading="lazy" />
         </div>
       </div>
     ),
@@ -164,19 +111,8 @@ const timelineData = [
     content: (
       <div>
         <h4 className="text-2xl md:text-4xl font-normal text-foreground mb-6 text-right">הסרטן מתפשט שוב פעם</h4>
-        <div className="grid grid-cols-2 gap-4 max-w-2xl">
-          <img
-            src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=500&h=500&fit=crop&q=80"
-            alt="התמודדות נוספת"
-            className="rounded-lg object-cover aspect-square w-full shadow-lg hover:shadow-[0_0_20px_rgba(16,185,129,0.3)] transition-shadow duration-300"
-            loading="lazy"
-          />
-          <img
-            src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=500&h=500&fit=crop&q=80"
-            alt="המשך המאבק"
-            className="rounded-lg object-cover aspect-square w-full shadow-lg hover:shadow-[0_0_20px_rgba(16,185,129,0.3)] transition-shadow duration-300"
-            loading="lazy"
-          />
+        <div className={imageGridClass}>
+          <img src="/timeline media/august 2025/1.jpeg" alt="הסרטן מתפשט" className={imageClass} loading="lazy" />
         </div>
       </div>
     ),
@@ -186,19 +122,9 @@ const timelineData = [
     content: (
       <div>
         <h4 className="text-2xl md:text-4xl font-normal text-foreground mb-6 text-right">הקמת ג'נר</h4>
-        <div className="grid grid-cols-2 gap-4 max-w-2xl">
-          <img
-            src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=500&h=500&fit=crop&q=80"
-            alt="הקמת ג'נר"
-            className="rounded-lg object-cover aspect-square w-full shadow-lg hover:shadow-[0_0_20px_rgba(16,185,129,0.3)] transition-shadow duration-300"
-            loading="lazy"
-          />
-          <img
-            src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=500&h=500&fit=crop&q=80"
-            alt="קהילה"
-            className="rounded-lg object-cover aspect-square w-full shadow-lg hover:shadow-[0_0_20px_rgba(16,185,129,0.3)] transition-shadow duration-300"
-            loading="lazy"
-          />
+        <div className={imageGridClass}>
+          <img src="/timeline media/november 2025/1.JPG" alt="הקמת ג'נר" className={imageClass} loading="lazy" />
+          <img src="/timeline media/november 2025/2.jpg" alt="הקמת ג'נר" className={imageClass} loading="lazy" />
         </div>
       </div>
     ),
