@@ -1,4 +1,4 @@
-import Navbar from "@/components/Navbar";
+import { Header } from "@/components/ui/header-3";
 import HeroSection from "@/components/HeroSection";
 import ChangingGameSection from "@/components/ChangingGameSection";
 import TimelineSection from "@/components/TimelineSection";
@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
+      <Header />
       <main>
         <HeroSection />
         <ChangingGameSection />
