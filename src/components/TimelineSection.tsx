@@ -14,10 +14,10 @@ const timelineData = [
       <div>
         <h4 className="text-2xl md:text-4xl font-normal text-foreground mb-6 text-right">לחימה בעזה</h4>
         <div className={imageGridClass}>
-          <img src="/timeline media/end of 2023/1.JPG" alt="לחימה בעזה" className={imageClass} loading="lazy" />
-          <img src="/timeline media/end of 2023/2.JPG" alt="לחימה בעזה" className={imageClass} loading="lazy" />
-          <img src="/timeline media/end of 2023/3.JPG" alt="לחימה בעזה" className={imageClass} loading="lazy" />
-          <img src="/timeline media/end of 2023/4.JPG" alt="לחימה בעזה" className={imageClass} loading="lazy" />
+          <img src="/timeline%20media/end%20of%202023/1.JPG" alt="לחימה בעזה" className={imageClass} loading="lazy" />
+          <img src="/timeline%20media/end%20of%202023/2.JPG" alt="לחימה בעזה" className={imageClass} loading="lazy" />
+          <img src="/timeline%20media/end%20of%202023/3.JPG" alt="לחימה בעזה" className={imageClass} loading="lazy" />
+          <img src="/timeline%20media/end%20of%202023/4.JPG" alt="לחימה בעזה" className={imageClass} loading="lazy" />
         </div>
       </div>
     ),
@@ -28,10 +28,10 @@ const timelineData = [
       <div>
         <h4 className="text-2xl md:text-4xl font-normal text-foreground mb-6 text-right">חולה בסרטן</h4>
         <div className={imageGridClass}>
-          <img src="/timeline media/april 2024/1.JPG" alt="חולה בסרטן" className={imageClass} loading="lazy" />
-          <img src="/timeline media/april 2024/2.JPG" alt="חולה בסרטן" className={imageClass} loading="lazy" />
-          <img src="/timeline media/april 2024/3.jpg" alt="חולה בסרטן" className={imageClass} loading="lazy" />
-          <img src="/timeline media/april 2024/4.jpg" alt="חולה בסרטן" className={imageClass} loading="lazy" />
+          <img src="/timeline%20media/april%202024/1.JPG" alt="חולה בסרטן" className={imageClass} loading="lazy" />
+          <img src="/timeline%20media/april%202024/2.JPG" alt="חולה בסרטן" className={imageClass} loading="lazy" />
+          <img src="/timeline%20media/april%202024/3.jpg" alt="חולה בסרטן" className={imageClass} loading="lazy" />
+          <img src="/timeline%20media/april%202024/4.jpg" alt="חולה בסרטן" className={imageClass} loading="lazy" />
         </div>
       </div>
     ),
@@ -42,10 +42,10 @@ const timelineData = [
       <div>
         <h4 className="text-2xl md:text-4xl font-normal text-foreground mb-6 text-right">רץ 60 ק"מ יום אחרי טיפולים</h4>
         <div className={imageGridClass}>
-          <img src="/timeline media/july 2024/1.jpg" alt="ריצה 60 קמ" className={imageClass} loading="lazy" />
-          <img src="/timeline media/july 2024/2.JPEG" alt="ריצה 60 קמ" className={imageClass} loading="lazy" />
-          <img src="/timeline media/july 2024/3.JPEG" alt="ריצה 60 קמ" className={imageClass} loading="lazy" />
-          <img src="/timeline media/july 2024/4.JPEG" alt="ריצה 60 קמ" className={imageClass} loading="lazy" />
+          <img src="/timeline%20media/july%202024/1.jpg" alt="ריצה 60 קמ" className={imageClass} loading="lazy" />
+          <img src="/timeline%20media/july%202024/2.JPEG" alt="ריצה 60 קמ" className={imageClass} loading="lazy" />
+          <img src="/timeline%20media/july%202024/3.JPEG" alt="ריצה 60 קמ" className={imageClass} loading="lazy" />
+          <img src="/timeline%20media/july%202024/4.JPEG" alt="ריצה 60 קמ" className={imageClass} loading="lazy" />
         </div>
       </div>
     ),
@@ -56,10 +56,10 @@ const timelineData = [
       <div>
         <h4 className="text-2xl md:text-4xl font-normal text-foreground mb-6 text-right">שיא ישראל לחצי המרתון הכבד ביותר</h4>
         <div className={imageGridClass}>
-          <img src="/timeline media/november 2024/1.JPG" alt="שיא ישראל" className={imageClass} loading="lazy" />
-          <img src="/timeline media/november 2024/2.JPEG" alt="שיא ישראל" className={imageClass} loading="lazy" />
-          <img src="/timeline media/november 2024/3.JPEG" alt="שיא ישראל" className={imageClass} loading="lazy" />
-          <img src="/timeline media/november 2024/4.JPEG" alt="שיא ישראל" className={imageClass} loading="lazy" />
+          <img src="/timeline%20media/november%202024/1.JPG" alt="שיא ישראל" className={imageClass} loading="lazy" />
+          <img src="/timeline%20media/november%202024/2.JPEG" alt="שיא ישראל" className={imageClass} loading="lazy" />
+          <img src="/timeline%20media/november%202024/3.JPEG" alt="שיא ישראל" className={imageClass} loading="lazy" />
+          <img src="/timeline%20media/november%202024/4.JPEG" alt="שיא ישראל" className={imageClass} loading="lazy" />
         </div>
       </div>
     ),
@@ -70,10 +70,10 @@ const timelineData = [
       <div>
         <h4 className="text-2xl md:text-4xl font-normal text-foreground mb-6 text-right">הסרטן התפשט לריאה</h4>
         <div className={imageGridClass}>
-          <img src="/timeline media/december 2024/1.jpeg" alt="הסרטן התפשט" className={imageClass} loading="lazy" />
-          <img src="/timeline media/december 2024/2.jpeg" alt="הסרטן התפשט" className={imageClass} loading="lazy" />
-          <img src="/timeline media/december 2024/3.jpeg" alt="הסרטן התפשט" className={imageClass} loading="lazy" />
-          <img src="/timeline media/december 2024/4.jpeg" alt="הסרטן התפשט" className={imageClass} loading="lazy" />
+          <img src="/timeline%20media/december%202024/1.jpeg" alt="הסרטן התפשט" className={imageClass} loading="lazy" />
+          <img src="/timeline%20media/december%202024/2.jpeg" alt="הסרטן התפשט" className={imageClass} loading="lazy" />
+          <img src="/timeline%20media/december%202024/3.jpeg" alt="הסרטן התפשט" className={imageClass} loading="lazy" />
+          <img src="/timeline%20media/december%202024/4.jpeg" alt="הסרטן התפשט" className={imageClass} loading="lazy" />
         </div>
       </div>
     ),
@@ -84,10 +84,10 @@ const timelineData = [
       <div>
         <h4 className="text-2xl md:text-4xl font-normal text-foreground mb-6 text-right">טס לאליפות העולם בשחייה במי קרח</h4>
         <div className={imageGridClass}>
-          <img src="/timeline media/january 2025/1.PNG" alt="אליפות עולם" className={imageClass} loading="lazy" />
-          <img src="/timeline media/january 2025/2.jpg" alt="אליפות עולם" className={imageClass} loading="lazy" />
-          <img src="/timeline media/january 2025/3.PNG" alt="אליפות עולם" className={imageClass} loading="lazy" />
-          <img src="/timeline media/january 2025/4.jpeg" alt="אליפות עולם" className={imageClass} loading="lazy" />
+          <img src="/timeline%20media/january%202025/1.PNG" alt="אליפות עולם" className={imageClass} loading="lazy" />
+          <img src="/timeline%20media/january%202025/2.jpg" alt="אליפות עולם" className={imageClass} loading="lazy" />
+          <img src="/timeline%20media/january%202025/3.PNG" alt="אליפות עולם" className={imageClass} loading="lazy" />
+          <img src="/timeline%20media/january%202025/4.jpeg" alt="אליפות עולם" className={imageClass} loading="lazy" />
         </div>
       </div>
     ),
@@ -98,10 +98,10 @@ const timelineData = [
       <div>
         <h4 className="text-2xl md:text-4xl font-normal text-foreground mb-6 text-right">קובע שיא ישראל למרתון הכבד ביותר שבוצע בישראל</h4>
         <div className={imageGridClass}>
-          <img src="/timeline media/july 2025/1.JPG" alt="שיא ישראל מרתון" className={imageClass} loading="lazy" />
-          <img src="/timeline media/july 2025/2.jpg" alt="שיא ישראל מרתון" className={imageClass} loading="lazy" />
-          <img src="/timeline media/july 2025/3.jpg" alt="שיא ישראל מרתון" className={imageClass} loading="lazy" />
-          <img src="/timeline media/july 2025/4.jpg" alt="שיא ישראל מרתון" className={imageClass} loading="lazy" />
+          <img src="/timeline%20media/july%202025/1.JPG" alt="שיא ישראל מרתון" className={imageClass} loading="lazy" />
+          <img src="/timeline%20media/july%202025/2.jpg" alt="שיא ישראל מרתון" className={imageClass} loading="lazy" />
+          <img src="/timeline%20media/july%202025/3.jpg" alt="שיא ישראל מרתון" className={imageClass} loading="lazy" />
+          <img src="/timeline%20media/july%202025/4.jpg" alt="שיא ישראל מרתון" className={imageClass} loading="lazy" />
         </div>
       </div>
     ),
@@ -112,7 +112,7 @@ const timelineData = [
       <div>
         <h4 className="text-2xl md:text-4xl font-normal text-foreground mb-6 text-right">הסרטן מתפשט שוב פעם</h4>
         <div className={imageGridClass}>
-          <img src="/timeline media/august 2025/1.jpeg" alt="הסרטן מתפשט" className={imageClass} loading="lazy" />
+          <img src="/timeline%20media/august%202025/1.jpeg" alt="הסרטן מתפשט" className={imageClass} loading="lazy" />
         </div>
       </div>
     ),
@@ -123,8 +123,8 @@ const timelineData = [
       <div>
         <h4 className="text-2xl md:text-4xl font-normal text-foreground mb-6 text-right">הקמת ג'נר</h4>
         <div className={imageGridClass}>
-          <img src="/timeline media/november 2025/1.JPG" alt="הקמת ג'נר" className={imageClass} loading="lazy" />
-          <img src="/timeline media/november 2025/2.jpg" alt="הקמת ג'נר" className={imageClass} loading="lazy" />
+          <img src="/timeline%20media/november%202025/1.JPG" alt="הקמת ג'נר" className={imageClass} loading="lazy" />
+          <img src="/timeline%20media/november%202025/2.jpg" alt="הקמת ג'נר" className={imageClass} loading="lazy" />
         </div>
       </div>
     ),
