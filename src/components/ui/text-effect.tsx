@@ -152,7 +152,7 @@ const AnimationComponent: React.FC<{
 }) => {
   const content = per === 'line' ? <motion.span variants={variants} className="block text-primary text-3xl">
         {segment}
-      </motion.span> : per === 'word' ? <motion.span aria-hidden='true' variants={variants} className="inline-block whitespace-pre text-9xl">
+      </motion.span> : per === 'word' ? <motion.span aria-hidden='true' variants={variants} className="inline-block whitespace-pre text-8xl">
         {segment}
       </motion.span> : <motion.span className='inline-block whitespace-pre'>
         {segment.split('').map((char, charIndex) => <motion.span key={`char-${charIndex}`} aria-hidden='true' variants={variants} className='inline-block whitespace-pre'>
