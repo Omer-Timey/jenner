@@ -1,7 +1,6 @@
 import { Header } from '@/components/ui/header-3';
 import Footer from '@/components/Footer';
 import ReactMarkdown from 'react-markdown';
-
 const articleContent = `**מהי סערה מטבולית?**
 
 סערה מטבולית היא רעיון שנולד מתוך שאלה פשוטה:  
@@ -25,19 +24,13 @@ const articleContent = `**מהי סערה מטבולית?**
 
 זהו מודל חשיבה:  
  **לא פתרון קסם, אלא מפת דרכים.** מה שאני מבקש להבהיר הוא שהמטרה של המסמך אינה לתת לחולה הוראות טיפוליות או לייעץ רפואית, אלא לשמש כמצפן מחשבתי וכלי מסדר: הוא נועד לאפשר לחולים שמגיעים אליו אחרי שכבר שמעו מהרופאים שיש`;
-
 const WhatIsMetabolicStorm = () => {
-  return (
-    <div className="min-h-screen bg-background" dir="rtl">
+  return <div className="min-h-screen bg-background" dir="rtl">
       <Header />
       
       {/* Hero Section with Full Screen Image */}
       <section className="relative h-screen w-full">
-        <img 
-          src="/what-is-metabolic-storm/main-image.png" 
-          alt="מהי סערה מטבולית"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+        <img src="/what-is-metabolic-storm/main-image.png" alt="מהי סערה מטבולית" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
         
         {/* Title at the bottom of the image */}
@@ -57,19 +50,21 @@ const WhatIsMetabolicStorm = () => {
       <section className="bg-background py-20 md:py-32">
         <article className="max-w-4xl mx-auto px-6 md:px-8">
           <div className="text-foreground/85 text-2xl md:text-3xl lg:text-4xl leading-relaxed">
-            <ReactMarkdown
-              components={{
-                p: ({ children }) => {
-                  // Skip the first paragraph which is just the title
-                  const text = String(children);
-                  if (text.includes('מהי סערה מטבולית?') && text.length < 30) {
-                    return null;
-                  }
-                  return <p className="mb-10">{children}</p>;
-                },
-                strong: ({ children }) => <strong className="text-foreground font-semibold">{children}</strong>,
-              }}
-            >
+            <ReactMarkdown components={{
+            p: ({
+              children
+            }) => {
+              // Skip the first paragraph which is just the title
+              const text = String(children);
+              if (text.includes('מהי סערה מטבולית?') && text.length < 30) {
+                return null;
+              }
+              return <p className="mb-10 text-3xl">{children}</p>;
+            },
+            strong: ({
+              children
+            }) => <strong className="text-foreground font-semibold">{children}</strong>
+          }}>
               {articleContent}
             </ReactMarkdown>
           </div>
@@ -77,8 +72,6 @@ const WhatIsMetabolicStorm = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default WhatIsMetabolicStorm;
