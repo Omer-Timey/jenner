@@ -263,7 +263,7 @@ const aboutLinks: LinkItem[] = [
 const researchLinks: LinkItem[] = [
   {
     title: 'מהי סערה מטבולית',
-    href: '#research',
+    href: '/what-is-metabolic-storm',
     description: 'הבנת הגישה המטבולית',
     icon: Flame,
   },
