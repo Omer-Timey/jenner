@@ -58,9 +58,11 @@ export function Header() {
           <div className="relative flex items-center justify-between py-3 lg:py-4">
             {/* Logo - Left side */}
             <a href="/" aria-label="home" className="flex items-center gap-2">
-              <span className="text-xl font-bold text-foreground tracking-tight">
-                סערה מטבולית
-              </span>
+              <img 
+                src="/logo.png" 
+                alt="סערה מטבולית" 
+                className="h-8 w-auto"
+              />
             </a>
 
             {/* Navigation - Center */}
